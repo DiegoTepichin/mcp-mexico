@@ -9,6 +9,7 @@ MCP server that gives AI agents access to official Mexican public data.
 | Tool | Description | Source |
 |---|---|---|
 | `get_uma` | UMA (Unidad de Medida y Actualización) daily, monthly and annual values, 2020–2026. | [INEGI](https://www.inegi.org.mx/temas/uma/) |
+| `get_isr_table` | ISR rate tables for individuals, 2020–2026: monthly (LISR Art. 96) and annual (LISR Art. 152). | Anexo 8 of the RMF ([SAT](https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/index.html) / DOF), cited per table |
 
 ## Development
 

@@ -1,10 +1,10 @@
 from datetime import date, timedelta
 from functools import cache
-from importlib.resources import files
 
 from pydantic import BaseModel
 
 from mcp_mexico.errors import DataNotAvailableError
+from mcp_mexico.fiscal.data import read_data_file
 from mcp_mexico.models import Source, Uma
 
 
@@ -23,8 +23,7 @@ class _UmaFile(BaseModel):
 
 @cache
 def _load() -> _UmaFile:
-    raw = files("mcp_mexico.fiscal.data").joinpath("uma.json").read_text(encoding="utf-8")
-    table = _UmaFile.model_validate_json(raw)
+    table = _UmaFile.model_validate_json(read_data_file("uma.json"))
     table.values.sort(key=lambda record: record.year)
     return table
 

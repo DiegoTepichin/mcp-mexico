@@ -1,0 +1,1082 @@
+{
+  "tables": [
+    {
+      "year": 2020,
+      "period": "monthly",
+      "source": {
+        "name": "DOF 09/01/2020, Anexo 8 de la Resolución Miscelánea Fiscal para 2020",
+        "url": "https://www.dof.gob.mx/nota_detalle.php?codigo=5583666&fecha=09/01/2020",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 578.52,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 578.53,
+          "upper_limit": 4910.18,
+          "fixed_fee": 11.11,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 4910.19,
+          "upper_limit": 8629.2,
+          "fixed_fee": 288.33,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 8629.21,
+          "upper_limit": 10031.07,
+          "fixed_fee": 692.96,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 10031.08,
+          "upper_limit": 12009.94,
+          "fixed_fee": 917.26,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 12009.95,
+          "upper_limit": 24222.31,
+          "fixed_fee": 1271.87,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 24222.32,
+          "upper_limit": 38177.69,
+          "fixed_fee": 3880.44,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 38177.7,
+          "upper_limit": 72887.5,
+          "fixed_fee": 7162.74,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 72887.51,
+          "upper_limit": 97183.33,
+          "fixed_fee": 17575.69,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 97183.34,
+          "upper_limit": 291550.0,
+          "fixed_fee": 25350.35,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 291550.01,
+          "upper_limit": null,
+          "fixed_fee": 91435.02,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "period": "annual",
+      "source": {
+        "name": "DOF 09/01/2020, Anexo 8 de la Resolución Miscelánea Fiscal para 2020",
+        "url": "https://www.dof.gob.mx/nota_detalle.php?codigo=5583666&fecha=09/01/2020",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 6942.2,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 6942.21,
+          "upper_limit": 58922.16,
+          "fixed_fee": 133.28,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 58922.17,
+          "upper_limit": 103550.44,
+          "fixed_fee": 3460.01,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 103550.45,
+          "upper_limit": 120372.83,
+          "fixed_fee": 8315.57,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 120372.84,
+          "upper_limit": 144119.23,
+          "fixed_fee": 11007.14,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 144119.24,
+          "upper_limit": 290667.75,
+          "fixed_fee": 15262.49,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 290667.76,
+          "upper_limit": 458132.29,
+          "fixed_fee": 46565.26,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 458132.3,
+          "upper_limit": 874650.0,
+          "fixed_fee": 85952.92,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 874650.01,
+          "upper_limit": 1166200.0,
+          "fixed_fee": 210908.23,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 1166200.01,
+          "upper_limit": 3498600.0,
+          "fixed_fee": 304204.21,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 3498600.01,
+          "upper_limit": null,
+          "fixed_fee": 1097220.21,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "period": "monthly",
+      "source": {
+        "name": "DOF 11/01/2021, Anexo 8 de la Resolución Miscelánea Fiscal para 2021",
+        "url": "https://dof.gob.mx/2021/SHCP/SHCP_ANEXOSRM_110120.pdf",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 644.58,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 644.59,
+          "upper_limit": 5470.92,
+          "fixed_fee": 12.38,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 5470.93,
+          "upper_limit": 9614.66,
+          "fixed_fee": 321.26,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 9614.67,
+          "upper_limit": 11176.62,
+          "fixed_fee": 772.1,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 11176.63,
+          "upper_limit": 13381.47,
+          "fixed_fee": 1022.01,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 13381.48,
+          "upper_limit": 26988.5,
+          "fixed_fee": 1417.12,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 26988.51,
+          "upper_limit": 42537.58,
+          "fixed_fee": 4323.58,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 42537.59,
+          "upper_limit": 81211.25,
+          "fixed_fee": 7980.73,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 81211.26,
+          "upper_limit": 108281.67,
+          "fixed_fee": 19582.83,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 108281.68,
+          "upper_limit": 324845.01,
+          "fixed_fee": 28245.36,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 324845.02,
+          "upper_limit": null,
+          "fixed_fee": 101876.9,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "period": "annual",
+      "source": {
+        "name": "DOF 11/01/2021, Anexo 8 de la Resolución Miscelánea Fiscal para 2021",
+        "url": "https://dof.gob.mx/2021/SHCP/SHCP_ANEXOSRM_110120.pdf",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 7735.0,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 7735.01,
+          "upper_limit": 65651.07,
+          "fixed_fee": 148.51,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 65651.08,
+          "upper_limit": 115375.9,
+          "fixed_fee": 3855.14,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 115375.91,
+          "upper_limit": 134119.41,
+          "fixed_fee": 9265.2,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 134119.42,
+          "upper_limit": 160577.65,
+          "fixed_fee": 12264.16,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 160577.66,
+          "upper_limit": 323862.0,
+          "fixed_fee": 17005.47,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 323862.01,
+          "upper_limit": 510451.0,
+          "fixed_fee": 51883.01,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 510451.01,
+          "upper_limit": 974535.03,
+          "fixed_fee": 95768.74,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 974535.04,
+          "upper_limit": 1299380.04,
+          "fixed_fee": 234993.95,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 1299380.05,
+          "upper_limit": 3898140.12,
+          "fixed_fee": 338944.34,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 3898140.13,
+          "upper_limit": null,
+          "fixed_fee": 1222522.76,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "period": "monthly",
+      "source": {
+        "name": "DOF 12/01/2022, Anexo 8 de la Resolución Miscelánea Fiscal para 2022",
+        "url": "https://www.dof.gob.mx/nota_detalle.php?codigo=5640505&fecha=12/01/2022",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 644.58,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 644.59,
+          "upper_limit": 5470.92,
+          "fixed_fee": 12.38,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 5470.93,
+          "upper_limit": 9614.66,
+          "fixed_fee": 321.26,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 9614.67,
+          "upper_limit": 11176.62,
+          "fixed_fee": 772.1,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 11176.63,
+          "upper_limit": 13381.47,
+          "fixed_fee": 1022.01,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 13381.48,
+          "upper_limit": 26988.5,
+          "fixed_fee": 1417.12,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 26988.51,
+          "upper_limit": 42537.58,
+          "fixed_fee": 4323.58,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 42537.59,
+          "upper_limit": 81211.25,
+          "fixed_fee": 7980.73,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 81211.26,
+          "upper_limit": 108281.67,
+          "fixed_fee": 19582.83,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 108281.68,
+          "upper_limit": 324845.01,
+          "fixed_fee": 28245.36,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 324845.02,
+          "upper_limit": null,
+          "fixed_fee": 101876.9,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "period": "annual",
+      "source": {
+        "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2023 (DOF 27/12/2022)",
+        "url": "https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos/rmf/anexos/Anexo_8-RMF_2023-27122022.pdf",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 7735.0,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 7735.01,
+          "upper_limit": 65651.07,
+          "fixed_fee": 148.51,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 65651.08,
+          "upper_limit": 115375.9,
+          "fixed_fee": 3855.14,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 115375.91,
+          "upper_limit": 134119.41,
+          "fixed_fee": 9265.2,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 134119.42,
+          "upper_limit": 160577.65,
+          "fixed_fee": 12264.16,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 160577.66,
+          "upper_limit": 323862.0,
+          "fixed_fee": 17005.47,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 323862.01,
+          "upper_limit": 510451.0,
+          "fixed_fee": 51883.01,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 510451.01,
+          "upper_limit": 974535.03,
+          "fixed_fee": 95768.74,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 974535.04,
+          "upper_limit": 1299380.04,
+          "fixed_fee": 234993.95,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 1299380.05,
+          "upper_limit": 3898140.12,
+          "fixed_fee": 338944.34,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 3898140.13,
+          "upper_limit": null,
+          "fixed_fee": 1222522.76,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "period": "monthly",
+      "source": {
+        "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2023 (DOF 27/12/2022)",
+        "url": "https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos/rmf/anexos/Anexo_8-RMF_2023-27122022.pdf",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 746.04,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 746.05,
+          "upper_limit": 6332.05,
+          "fixed_fee": 14.32,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 6332.06,
+          "upper_limit": 11128.01,
+          "fixed_fee": 371.83,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 11128.02,
+          "upper_limit": 12935.82,
+          "fixed_fee": 893.63,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 12935.83,
+          "upper_limit": 15487.71,
+          "fixed_fee": 1182.88,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 15487.72,
+          "upper_limit": 31236.49,
+          "fixed_fee": 1640.18,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 31236.5,
+          "upper_limit": 49233.0,
+          "fixed_fee": 5004.12,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 49233.01,
+          "upper_limit": 93993.9,
+          "fixed_fee": 9236.89,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 93993.91,
+          "upper_limit": 125325.2,
+          "fixed_fee": 22665.17,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 125325.21,
+          "upper_limit": 375975.61,
+          "fixed_fee": 32691.18,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 375975.62,
+          "upper_limit": null,
+          "fixed_fee": 117912.32,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "period": "annual",
+      "source": {
+        "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2024 (DOF 29/12/2023)",
+        "url": "https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2024/rmf/anexos/Anexo_8_RMF2024-29122023.pdf",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 8952.49,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 8952.5,
+          "upper_limit": 75984.55,
+          "fixed_fee": 171.88,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 75984.56,
+          "upper_limit": 133536.07,
+          "fixed_fee": 4461.94,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 133536.08,
+          "upper_limit": 155229.8,
+          "fixed_fee": 10723.55,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 155229.81,
+          "upper_limit": 185852.57,
+          "fixed_fee": 14194.54,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 185852.58,
+          "upper_limit": 374837.88,
+          "fixed_fee": 19682.13,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 374837.89,
+          "upper_limit": 590795.99,
+          "fixed_fee": 60049.4,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 590796.0,
+          "upper_limit": 1127926.84,
+          "fixed_fee": 110842.74,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 1127926.85,
+          "upper_limit": 1503902.46,
+          "fixed_fee": 271981.99,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 1503902.47,
+          "upper_limit": 4511707.37,
+          "fixed_fee": 392294.17,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 4511707.38,
+          "upper_limit": null,
+          "fixed_fee": 1414947.85,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "period": "monthly",
+      "source": {
+        "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2024 (DOF 29/12/2023)",
+        "url": "https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2024/rmf/anexos/Anexo_8_RMF2024-29122023.pdf",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 746.04,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 746.05,
+          "upper_limit": 6332.05,
+          "fixed_fee": 14.32,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 6332.06,
+          "upper_limit": 11128.01,
+          "fixed_fee": 371.83,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 11128.02,
+          "upper_limit": 12935.82,
+          "fixed_fee": 893.63,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 12935.83,
+          "upper_limit": 15487.71,
+          "fixed_fee": 1182.88,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 15487.72,
+          "upper_limit": 31236.49,
+          "fixed_fee": 1640.18,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 31236.5,
+          "upper_limit": 49233.0,
+          "fixed_fee": 5004.12,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 49233.01,
+          "upper_limit": 93993.9,
+          "fixed_fee": 9236.89,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 93993.91,
+          "upper_limit": 125325.2,
+          "fixed_fee": 22665.17,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 125325.21,
+          "upper_limit": 375975.61,
+          "fixed_fee": 32691.18,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 375975.62,
+          "upper_limit": null,
+          "fixed_fee": 117912.32,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "period": "annual",
+      "source": {
+        "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2025 (DOF 30/12/2024)",
+        "url": "https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2025/rmf/anexos/Anexo8_RMF2025-30122024.pdf",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 8952.49,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 8952.5,
+          "upper_limit": 75984.55,
+          "fixed_fee": 171.88,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 75984.56,
+          "upper_limit": 133536.07,
+          "fixed_fee": 4461.94,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 133536.08,
+          "upper_limit": 155229.8,
+          "fixed_fee": 10723.55,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 155229.81,
+          "upper_limit": 185852.57,
+          "fixed_fee": 14194.54,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 185852.58,
+          "upper_limit": 374837.88,
+          "fixed_fee": 19682.13,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 374837.89,
+          "upper_limit": 590795.99,
+          "fixed_fee": 60049.4,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 590796.0,
+          "upper_limit": 1127926.84,
+          "fixed_fee": 110842.74,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 1127926.85,
+          "upper_limit": 1503902.46,
+          "fixed_fee": 271981.99,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 1503902.47,
+          "upper_limit": 4511707.37,
+          "fixed_fee": 392294.17,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 4511707.38,
+          "upper_limit": null,
+          "fixed_fee": 1414947.85,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "period": "monthly",
+      "source": {
+        "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2025 (DOF 30/12/2024)",
+        "url": "https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2025/rmf/anexos/Anexo8_RMF2025-30122024.pdf",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 746.04,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 746.05,
+          "upper_limit": 6332.05,
+          "fixed_fee": 14.32,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 6332.06,
+          "upper_limit": 11128.01,
+          "fixed_fee": 371.83,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 11128.02,
+          "upper_limit": 12935.82,
+          "fixed_fee": 893.63,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 12935.83,
+          "upper_limit": 15487.71,
+          "fixed_fee": 1182.88,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 15487.72,
+          "upper_limit": 31236.49,
+          "fixed_fee": 1640.18,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 31236.5,
+          "upper_limit": 49233.0,
+          "fixed_fee": 5004.12,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 49233.01,
+          "upper_limit": 93993.9,
+          "fixed_fee": 9236.89,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 93993.91,
+          "upper_limit": 125325.2,
+          "fixed_fee": 22665.17,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 125325.21,
+          "upper_limit": 375975.61,
+          "fixed_fee": 32691.18,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 375975.62,
+          "upper_limit": null,
+          "fixed_fee": 117912.32,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "period": "annual",
+      "source": {
+        "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2026 (DOF 28/12/2025)",
+        "url": "https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-8-RMF-2026_DOF-28122025.pdf",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 8952.49,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 8952.5,
+          "upper_limit": 75984.55,
+          "fixed_fee": 171.88,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 75984.56,
+          "upper_limit": 133536.07,
+          "fixed_fee": 4461.94,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 133536.08,
+          "upper_limit": 155229.8,
+          "fixed_fee": 10723.55,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 155229.81,
+          "upper_limit": 185852.57,
+          "fixed_fee": 14194.54,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 185852.58,
+          "upper_limit": 374837.88,
+          "fixed_fee": 19682.13,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 374837.89,
+          "upper_limit": 590795.99,
+          "fixed_fee": 60049.4,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 590796.0,
+          "upper_limit": 1127926.84,
+          "fixed_fee": 110842.74,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 1127926.85,
+          "upper_limit": 1503902.46,
+          "fixed_fee": 271981.99,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 1503902.47,
+          "upper_limit": 4511707.37,
+          "fixed_fee": 392294.17,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 4511707.38,
+          "upper_limit": null,
+          "fixed_fee": 1414947.85,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "period": "monthly",
+      "source": {
+        "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2026 (DOF 28/12/2025)",
+        "url": "https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-8-RMF-2026_DOF-28122025.pdf",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 844.59,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 844.6,
+          "upper_limit": 7168.51,
+          "fixed_fee": 16.22,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 7168.52,
+          "upper_limit": 12598.02,
+          "fixed_fee": 420.95,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 12598.03,
+          "upper_limit": 14644.64,
+          "fixed_fee": 1011.68,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 14644.65,
+          "upper_limit": 17533.64,
+          "fixed_fee": 1339.14,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 17533.65,
+          "upper_limit": 35362.83,
+          "fixed_fee": 1856.84,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 35362.84,
+          "upper_limit": 55736.68,
+          "fixed_fee": 5665.16,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 55736.69,
+          "upper_limit": 106410.5,
+          "fixed_fee": 10457.09,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 106410.51,
+          "upper_limit": 141880.66,
+          "fixed_fee": 25659.23,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 141880.67,
+          "upper_limit": 425641.99,
+          "fixed_fee": 37009.69,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 425642.0,
+          "upper_limit": null,
+          "fixed_fee": 133488.54,
+          "rate_percent": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "period": "annual",
+      "source": {
+        "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2026 (DOF 28/12/2025)",
+        "url": "https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-8-RMF-2026_DOF-28122025.pdf",
+        "verified_on": "2026-10-03"
+      },
+      "brackets": [
+        {
+          "lower_limit": 0.01,
+          "upper_limit": 10135.11,
+          "fixed_fee": 0.0,
+          "rate_percent": 1.92
+        },
+        {
+          "lower_limit": 10135.12,
+          "upper_limit": 86022.11,
+          "fixed_fee": 194.59,
+          "rate_percent": 6.4
+        },
+        {
+          "lower_limit": 86022.12,
+          "upper_limit": 151176.19,
+          "fixed_fee": 5051.37,
+          "rate_percent": 10.88
+        },
+        {
+          "lower_limit": 151176.2,
+          "upper_limit": 175735.66,
+          "fixed_fee": 12140.13,
+          "rate_percent": 16.0
+        },
+        {
+          "lower_limit": 175735.67,
+          "upper_limit": 210403.69,
+          "fixed_fee": 16069.64,
+          "rate_percent": 17.92
+        },
+        {
+          "lower_limit": 210403.7,
+          "upper_limit": 424353.97,
+          "fixed_fee": 22282.14,
+          "rate_percent": 21.36
+        },
+        {
+          "lower_limit": 424353.98,
+          "upper_limit": 668840.14,
+          "fixed_fee": 67981.92,
+          "rate_percent": 23.52
+        },
+        {
+          "lower_limit": 668840.15,
+          "upper_limit": 1276925.98,
+          "fixed_fee": 125485.07,
+          "rate_percent": 30.0
+        },
+        {
+          "lower_limit": 1276925.99,
+          "upper_limit": 1702567.97,
+          "fixed_fee": 307910.81,
+          "rate_percent": 32.0
+        },
+        {
+          "lower_limit": 1702567.98,
+          "upper_limit": 5107703.92,
+          "fixed_fee": 444116.23,
+          "rate_percent": 34.0
+        },
+        {
+          "lower_limit": 5107703.93,
+          "upper_limit": null,
+          "fixed_fee": 1601862.46,
+          "rate_percent": 35.0
+        }
+      ]
+    }
+  ]
+}

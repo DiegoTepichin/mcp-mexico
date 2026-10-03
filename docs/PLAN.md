@@ -51,7 +51,7 @@ Key decisions:
 | `get_inflation` | optional `year`/`month` | INPC index, monthly and annual inflation for the period, or the latest | INEGI |
 | `get_inflation_range` | `start`, `end` (year-month) | Series of the above | INEGI |
 | `get_uma` | optional `year` (2020–2026) | Daily, monthly and annual UMA and validity date | INEGI / DOF |
-| `get_isr_table` | `year` (2020–2026), `period` (`monthly`, `annual`) | ISR rate table (Art. 96 monthly, Art. 152 annual) | RMF Annex 8 / DOF |
+| `get_isr_table` | optional `year` (2020–2026), `period` (`monthly`, `annual`) | ISR rate table (Art. 96 monthly, Art. 152 annual) | RMF Annex 8 / DOF |
 
 Banxico series IDs (FIX, target rate, TIIE 28, overnight funding TIIE, CETES 28) and INEGI indicator IDs (INPC) get confirmed against the live APIs in M3/M4 and recorded in fixtures. Nothing is hardcoded from memory without verification.
 
