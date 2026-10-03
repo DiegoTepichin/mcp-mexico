@@ -33,8 +33,21 @@ Anything else is out of scope until v0.1 ships.
 
 ## Commands
 
-None yet. Add each command here once it exists and has been run.
+```bash
+uv sync                      # install dependencies
+uv run mcp-mexico            # start the server over stdio
+uv run pytest                # tests
+uv run ruff check .          # lint
+uv run ruff format --check . # format check
+uv run mypy .                # strict type check
+```
 
 ## Structure
 
-Not defined yet. Decided in `docs/PLAN.md`.
+See `docs/PLAN.md` for the full architecture.
+
+- `src/mcp_mexico/server.py`: builds the `MCPServer` and registers tools; `main()` is the console entry point.
+- `src/mcp_mexico/tools/`: tool functions exposed over MCP; they turn domain errors into `ToolError`.
+- `src/mcp_mexico/fiscal/`: offline data (`data/*.json`, each with its source) and loaders.
+- `src/mcp_mexico/models.py`: Pydantic models returned by tools; every result carries a `Source`.
+- `tests/`: unit tests plus tool tests through an in-memory `mcp.Client`.
