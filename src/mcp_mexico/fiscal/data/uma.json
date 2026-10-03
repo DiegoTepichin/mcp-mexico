@@ -1,0 +1,16 @@
+{
+  "source": {
+    "name": "INEGI, Unidad de Medida y Actualización (UMA)",
+    "url": "https://www.inegi.org.mx/temas/uma/",
+    "verified_on": "2026-10-02"
+  },
+  "values": [
+    { "year": 2020, "daily": 86.88, "monthly": 2641.15, "annual": 31693.80, "valid_from": "2020-02-01" },
+    { "year": 2021, "daily": 89.62, "monthly": 2724.45, "annual": 32693.40, "valid_from": "2021-02-01" },
+    { "year": 2022, "daily": 96.22, "monthly": 2925.09, "annual": 35101.08, "valid_from": "2022-02-01" },
+    { "year": 2023, "daily": 103.74, "monthly": 3153.70, "annual": 37844.40, "valid_from": "2023-02-01" },
+    { "year": 2024, "daily": 108.57, "monthly": 3300.53, "annual": 39606.36, "valid_from": "2024-02-01" },
+    { "year": 2025, "daily": 113.14, "monthly": 3439.46, "annual": 41273.52, "valid_from": "2025-02-01" },
+    { "year": 2026, "daily": 117.31, "monthly": 3566.22, "annual": 42794.64, "valid_from": "2026-02-01" }
+  ]
+}
