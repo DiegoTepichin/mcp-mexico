@@ -63,3 +63,28 @@ class IndicatorSeries(BaseModel):
     end: date
     observations: list[Observation]
     source: Source
+
+
+class InflationPeriod(BaseModel):
+    period: str = Field(description="Month as YYYY-MM.")
+    inpc: float = Field(description="INPC general index, 2nd fortnight of July 2018 = 100.")
+    monthly_inflation_percent: float | None = Field(
+        description="Change vs the previous month. None when that month is not available."
+    )
+    annual_inflation_percent: float | None = Field(
+        description="Change vs the same month of the previous year. None when not available."
+    )
+    year_to_date_inflation_percent: float | None = Field(
+        description="Change vs December of the previous year. None when not available."
+    )
+
+
+class Inflation(InflationPeriod):
+    source: Source
+
+
+class InflationSeries(BaseModel):
+    start: str
+    end: str
+    periods: list[InflationPeriod]
+    source: Source

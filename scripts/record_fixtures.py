@@ -11,8 +11,10 @@ from pathlib import Path
 
 import httpx
 
-from mcp_mexico.config import BANXICO_TOKEN_VAR, read_token
+from mcp_mexico.config import BANXICO_TOKEN_VAR, INEGI_TOKEN_VAR, read_token
 from mcp_mexico.sources.banxico import BASE_URL as BANXICO_BASE_URL
+from mcp_mexico.sources.inegi import BASE_URL as INEGI_BASE_URL
+from mcp_mexico.sources.inegi import INPC_PATH
 
 FIXTURES_DIR = Path(__file__).resolve().parent.parent / "tests" / "fixtures"
 
@@ -28,29 +30,42 @@ BANXICO_PATHS = [
     "SF43936/datos/2026-07-01/2026-09-30",
 ]
 
+INEGI_PATHS = [INPC_PATH]
+
 
 def fixture_name(path: str) -> str:
     return path.replace("/", "_") + ".json"
 
 
-def record_banxico(token: str) -> None:
-    target = FIXTURES_DIR / "banxico"
-    target.mkdir(parents=True, exist_ok=True)
-    with httpx.Client(timeout=30) as client:
-        for path in BANXICO_PATHS:
-            response = client.get(f"{BANXICO_BASE_URL}/{path}", headers={"Bmx-Token": token})
-            response.raise_for_status()
-            content = json.dumps(response.json(), ensure_ascii=False, indent=2) + "\n"
-            (target / fixture_name(path)).write_text(content, encoding="utf-8")
-            print(f"recorded banxico/{fixture_name(path)}")
+def save(source: str, path: str, response: httpx.Response) -> None:
+    response.raise_for_status()
+    target = FIXTURES_DIR / source / fixture_name(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(json.dumps(response.json(), ensure_ascii=False, indent=2) + "\n", "utf-8")
+    print(f"recorded {source}/{target.name}")
+
+
+def record_banxico(client: httpx.Client, token: str) -> None:
+    for path in BANXICO_PATHS:
+        response = client.get(f"{BANXICO_BASE_URL}/{path}", headers={"Bmx-Token": token})
+        save("banxico", path, response)
+
+
+def record_inegi(client: httpx.Client, token: str) -> None:
+    for path in INEGI_PATHS:
+        response = client.get(f"{INEGI_BASE_URL}/{path}/{token}", params={"type": "json"})
+        save("inegi", path, response)
 
 
 def main() -> int:
-    token = read_token(BANXICO_TOKEN_VAR)
-    if token is None:
-        print(f"{BANXICO_TOKEN_VAR} is not set.", file=sys.stderr)
+    banxico_token = read_token(BANXICO_TOKEN_VAR)
+    inegi_token = read_token(INEGI_TOKEN_VAR)
+    if banxico_token is None or inegi_token is None:
+        print(f"Both {BANXICO_TOKEN_VAR} and {INEGI_TOKEN_VAR} must be set.", file=sys.stderr)
         return 1
-    record_banxico(token)
+    with httpx.Client(timeout=30) as client:
+        record_banxico(client, banxico_token)
+        record_inegi(client, inegi_token)
     return 0
 
 
