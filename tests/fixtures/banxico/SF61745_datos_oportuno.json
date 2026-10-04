@@ -1,0 +1,16 @@
+{
+  "bmx": {
+    "series": [
+      {
+        "idSerie": "SF61745",
+        "titulo": "Tasa objetivo",
+        "datos": [
+          {
+            "fecha": "04/10/2026",
+            "dato": "6.5000"
+          }
+        ]
+      }
+    ]
+  }
+}

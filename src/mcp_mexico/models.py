@@ -39,3 +39,27 @@ class IsrTable(BaseModel):
     legal_basis: str
     brackets: list[IsrBracket]
     source: VerifiedSource
+
+
+class Observation(BaseModel):
+    date: date
+    value: float
+
+
+class IndicatorValue(BaseModel):
+    indicator: str
+    description: str
+    unit: str
+    date: date
+    value: float
+    source: Source
+
+
+class IndicatorSeries(BaseModel):
+    indicator: str
+    description: str
+    unit: str
+    start: date
+    end: date
+    observations: list[Observation]
+    source: Source

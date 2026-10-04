@@ -1,0 +1,16 @@
+{
+  "bmx": {
+    "series": [
+      {
+        "idSerie": "SF331451",
+        "titulo": "TIIE de Fondeo a Un Día Hábil Bancario, Mediana ponderada por volumen",
+        "datos": [
+          {
+            "fecha": "02/10/2026",
+            "dato": "6.4800"
+          }
+        ]
+      }
+    ]
+  }
+}

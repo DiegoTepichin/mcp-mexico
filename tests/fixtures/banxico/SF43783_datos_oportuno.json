@@ -1,0 +1,16 @@
+{
+  "bmx": {
+    "series": [
+      {
+        "idSerie": "SF43783",
+        "titulo": "TIIE a 28 días Tasa de interés en por ciento anual",
+        "datos": [
+          {
+            "fecha": "05/10/2026",
+            "dato": "6.7559"
+          }
+        ]
+      }
+    ]
+  }
+}
