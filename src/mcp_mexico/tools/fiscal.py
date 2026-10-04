@@ -1,11 +1,9 @@
 from datetime import date
 
-from mcp.server.mcpserver.exceptions import ToolError
-
-from mcp_mexico.errors import DataNotAvailableError
 from mcp_mexico.fiscal.isr import isr_table
 from mcp_mexico.fiscal.uma import uma_for_year, uma_in_force
 from mcp_mexico.models import IsrPeriod, IsrTable, Uma
+from mcp_mexico.tools._errors import as_tool_error
 
 
 def get_uma(year: int | None = None) -> Uma:
@@ -15,10 +13,8 @@ def get_uma(year: int | None = None) -> Uma:
     official source. Without `year`, returns the UMA in force today. Each year's
     UMA takes effect on February 1, so in January the previous year's value applies.
     """
-    try:
+    with as_tool_error():
         return uma_in_force(date.today()) if year is None else uma_for_year(year)
-    except DataNotAvailableError as error:
-        raise ToolError(str(error)) from error
 
 
 def get_isr_table(year: int | None = None, period: IsrPeriod = "monthly") -> IsrTable:
@@ -30,7 +26,5 @@ def get_isr_table(year: int | None = None, period: IsrPeriod = "monthly") -> Isr
     bracket containing the taxable income, then: fixed_fee + (income - lower_limit)
     * rate_percent / 100.
     """
-    try:
+    with as_tool_error():
         return isr_table(date.today().year if year is None else year, period)
-    except DataNotAvailableError as error:
-        raise ToolError(str(error)) from error

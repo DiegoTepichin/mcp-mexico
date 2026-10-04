@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 from mcp_mexico.errors import DataNotAvailableError
 from mcp_mexico.fiscal.data import read_data_file
-from mcp_mexico.models import IsrBracket, IsrPeriod, IsrTable, Source
+from mcp_mexico.models import IsrBracket, IsrPeriod, IsrTable, VerifiedSource
 
 _LEGAL_BASIS: dict[IsrPeriod, str] = {
     "monthly": "Ley del ISR, artículo 96 (pagos provisionales mensuales)",
@@ -15,7 +15,7 @@ _LEGAL_BASIS: dict[IsrPeriod, str] = {
 class _IsrRecord(BaseModel):
     year: int
     period: IsrPeriod
-    source: Source
+    source: VerifiedSource
     brackets: list[IsrBracket]
 
 
