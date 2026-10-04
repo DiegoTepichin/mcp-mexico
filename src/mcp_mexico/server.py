@@ -1,13 +1,16 @@
 from mcp.server.mcpserver import MCPServer
 from mcp.types import ToolAnnotations
 
+from mcp_mexico.sources.banxico import BanxicoClient
+from mcp_mexico.tools.banxico import BanxicoTools
 from mcp_mexico.tools.fiscal import get_isr_table, get_uma
 
 _READ_ONLY = ToolAnnotations(read_only_hint=True, destructive_hint=False, idempotent_hint=True)
 _OFFLINE = _READ_ONLY.model_copy(update={"open_world_hint": False})
+_ONLINE = _READ_ONLY.model_copy(update={"open_world_hint": True})
 
 
-def build_server() -> MCPServer:
+def build_server(banxico: BanxicoClient | None = None) -> MCPServer:
     server = MCPServer(
         name="mcp-mexico",
         instructions=(
@@ -17,7 +20,17 @@ def build_server() -> MCPServer:
     )
     server.add_tool(get_uma, title="UMA (Unidad de Medida y Actualización)", annotations=_OFFLINE)
     server.add_tool(get_isr_table, title="ISR rate table (personas físicas)", annotations=_OFFLINE)
+    _add_banxico_tools(server, BanxicoTools(banxico or BanxicoClient.from_env()))
     return server
+
+
+def _add_banxico_tools(server: MCPServer, tools: BanxicoTools) -> None:
+    server.add_tool(tools.get_fix_rate, title="FIX exchange rate", annotations=_ONLINE)
+    server.add_tool(tools.get_fix_rate_range, title="FIX exchange rate series", annotations=_ONLINE)
+    server.add_tool(tools.get_interest_rate, title="Interest rate", annotations=_ONLINE)
+    server.add_tool(
+        tools.get_interest_rate_range, title="Interest rate series", annotations=_ONLINE
+    )
 
 
 def main() -> None:

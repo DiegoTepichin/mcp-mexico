@@ -7,7 +7,10 @@ from pydantic import BaseModel, Field
 class Source(BaseModel):
     name: str
     url: str
-    verified_on: date
+
+
+class VerifiedSource(Source):
+    verified_on: date = Field(description="Date the packaged data was checked against the source.")
 
 
 class Uma(BaseModel):
@@ -17,7 +20,7 @@ class Uma(BaseModel):
     annual: float
     valid_from: date
     valid_until: date | None
-    source: Source
+    source: VerifiedSource
 
 
 IsrPeriod = Literal["monthly", "annual"]
@@ -35,4 +38,28 @@ class IsrTable(BaseModel):
     period: IsrPeriod
     legal_basis: str
     brackets: list[IsrBracket]
+    source: VerifiedSource
+
+
+class Observation(BaseModel):
+    date: date
+    value: float
+
+
+class IndicatorValue(BaseModel):
+    indicator: str
+    description: str
+    unit: str
+    date: date
+    value: float
+    source: Source
+
+
+class IndicatorSeries(BaseModel):
+    indicator: str
+    description: str
+    unit: str
+    start: date
+    end: date
+    observations: list[Observation]
     source: Source

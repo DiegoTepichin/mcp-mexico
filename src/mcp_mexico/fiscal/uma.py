@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 from mcp_mexico.errors import DataNotAvailableError
 from mcp_mexico.fiscal.data import read_data_file
-from mcp_mexico.models import Source, Uma
+from mcp_mexico.models import Uma, VerifiedSource
 
 
 class _UmaRecord(BaseModel):
@@ -17,7 +17,7 @@ class _UmaRecord(BaseModel):
 
 
 class _UmaFile(BaseModel):
-    source: Source
+    source: VerifiedSource
     values: list[_UmaRecord]
 
 
@@ -49,7 +49,7 @@ def uma_in_force(on: date) -> Uma:
     return uma_for_year(in_force[-1].year)
 
 
-def _to_uma(record: _UmaRecord, successor: _UmaRecord | None, source: Source) -> Uma:
+def _to_uma(record: _UmaRecord, successor: _UmaRecord | None, source: VerifiedSource) -> Uma:
     valid_until = successor.valid_from - timedelta(days=1) if successor else None
     return Uma(
         year=record.year,

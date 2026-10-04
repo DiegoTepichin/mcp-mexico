@@ -20,6 +20,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
+    "httpx>=0.28",
     "mcp>=2.2,<2.3",
     "pydantic>=2",
 ]
@@ -44,7 +45,7 @@ select = ["E", "W", "F", "I", "B", "UP", "SIM", "RUF", "N", "PT", "ANN", "TC"]
 [tool.mypy]
 strict = true
 python_version = "3.11"
-files = ["src", "tests"]
+files = ["src", "tests", "scripts"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

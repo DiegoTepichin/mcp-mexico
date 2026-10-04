@@ -1,0 +1,40 @@
+{
+  "bmx": {
+    "series": [
+      {
+        "idSerie": "SF43718",
+        "titulo": "Tipo de cambio                                          Pesos por dólar E.U.A. Tipo de cambio para solventar obligaciones denominadas en moneda extranjera Fecha de determinación (FIX)",
+        "datos": [
+          {
+            "fecha": "17/09/2026",
+            "dato": "17.1872"
+          },
+          {
+            "fecha": "18/09/2026",
+            "dato": "17.2450"
+          },
+          {
+            "fecha": "21/09/2026",
+            "dato": "17.2203"
+          },
+          {
+            "fecha": "22/09/2026",
+            "dato": "17.3015"
+          },
+          {
+            "fecha": "23/09/2026",
+            "dato": "17.5030"
+          },
+          {
+            "fecha": "24/09/2026",
+            "dato": "17.6425"
+          },
+          {
+            "fecha": "25/09/2026",
+            "dato": "17.7100"
+          }
+        ]
+      }
+    ]
+  }
+}
