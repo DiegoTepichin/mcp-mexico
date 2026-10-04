@@ -1,6 +1,6 @@
 [project]
 name = "mcp-mexico"
-version = "0.0.1"
+version = "0.1.0rc1"
 description = "MCP server that gives AI agents access to official Mexican public data: Banxico, INEGI, UMA and ISR tables."
 readme = "README.md"
 license = "MIT"
@@ -25,12 +25,20 @@ dependencies = [
     "pydantic>=2",
 ]
 
+[project.urls]
+Homepage = "https://github.com/DiegoTepichin/mcp-mexico"
+Repository = "https://github.com/DiegoTepichin/mcp-mexico"
+Issues = "https://github.com/DiegoTepichin/mcp-mexico/issues"
+
 [project.scripts]
 mcp-mexico = "mcp_mexico.server:main"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "scripts", "README.md", "README.es.md", "LICENSE", ".env.example"]
 
 [tool.ruff]
 line-length = 100
