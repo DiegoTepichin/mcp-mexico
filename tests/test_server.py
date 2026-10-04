@@ -6,12 +6,13 @@ from mcp import Client
 from mcp_mexico.fiscal.uma import uma_in_force
 from mcp_mexico.server import build_server
 from mcp_mexico.sources.banxico import BanxicoClient
+from mcp_mexico.sources.inegi import InegiClient
 
 pytestmark = pytest.mark.anyio
 
 
-async def test_lists_tools_as_read_only(banxico: BanxicoClient) -> None:
-    async with Client(build_server(banxico)) as client:
+async def test_lists_tools_as_read_only(banxico: BanxicoClient, inegi: InegiClient) -> None:
+    async with Client(build_server(banxico, inegi)) as client:
         result = await client.list_tools()
 
     tools = {tool.name: tool for tool in result.tools}
@@ -22,6 +23,8 @@ async def test_lists_tools_as_read_only(banxico: BanxicoClient) -> None:
         "get_fix_rate_range",
         "get_interest_rate",
         "get_interest_rate_range",
+        "get_inflation",
+        "get_inflation_range",
     }
     for tool in tools.values():
         assert tool.annotations is not None

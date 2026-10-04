@@ -6,6 +6,8 @@ import pytest
 
 from mcp_mexico.sources.banxico import BASE_URL as BANXICO_BASE_URL
 from mcp_mexico.sources.banxico import BanxicoClient
+from mcp_mexico.sources.inegi import BASE_URL as INEGI_BASE_URL
+from mcp_mexico.sources.inegi import InegiClient
 
 FIXTURES_DIR = Path(__file__).parent / "fixtures"
 FAKE_TOKEN = "test-token"
@@ -37,6 +39,15 @@ def serve_banxico_fixtures(request: httpx.Request) -> httpx.Response:
     return httpx.Response(200, content=fixture.read_bytes())
 
 
+def serve_inegi_fixtures(request: httpx.Request) -> httpx.Response:
+    path = request.url.path.removeprefix(httpx.URL(INEGI_BASE_URL).path + "/")
+    path_without_token = path.rsplit("/", 1)[0]
+    if path.rsplit("/", 1)[1] != FAKE_TOKEN:
+        return httpx.Response(400, json=["ErrorInfo:No se encontraron resultados", "ErrorCode:100"])
+    fixture = FIXTURES_DIR / "inegi" / (path_without_token.replace("/", "_") + ".json")
+    return httpx.Response(200, content=fixture.read_bytes())
+
+
 def banxico_client(
     handler: Handler = serve_banxico_fixtures, token: str | None = FAKE_TOKEN
 ) -> tuple[BanxicoClient, RecordingTransport]:
@@ -47,4 +58,17 @@ def banxico_client(
 @pytest.fixture
 def banxico() -> BanxicoClient:
     client, _ = banxico_client()
+    return client
+
+
+def inegi_client(
+    handler: Handler = serve_inegi_fixtures, token: str | None = FAKE_TOKEN
+) -> tuple[InegiClient, RecordingTransport]:
+    transport = RecordingTransport(handler)
+    return InegiClient(token, httpx.AsyncClient(transport=transport)), transport
+
+
+@pytest.fixture
+def inegi() -> InegiClient:
+    client, _ = inegi_client()
     return client
