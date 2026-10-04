@@ -49,12 +49,12 @@ Key decisions:
 | `get_fix_rate_range` | `start`, `end` | FIX series | Banxico SIE |
 | `get_interest_rate` | `rate` (`target`, `tiie_28`, `tiie_funding`, `cetes_28`), optional `date` | Latest value, or the value on/before a date | Banxico SIE |
 | `get_interest_rate_range` | `rate`, `start`, `end` | Series | Banxico SIE |
-| `get_inflation` | optional `year`/`month` | INPC index, monthly and annual inflation for the period, or the latest | INEGI |
+| `get_inflation` | optional `year`/`month` | INPC index, monthly, annual and year-to-date inflation for the period, or the latest | INEGI |
 | `get_inflation_range` | `start`, `end` (year-month) | Series of the above | INEGI |
 | `get_uma` | optional `year` (2020–2026) | Daily, monthly and annual UMA and validity date | INEGI / DOF |
 | `get_isr_table` | optional `year` (2020–2026), `period` (`monthly`, `annual`) | ISR rate table (Art. 96 monthly, Art. 152 annual) | RMF Annex 8 / DOF |
 
-Banxico series IDs, confirmed against the live API on 2026-10-03: FIX `SF43718`, target rate `SF61745`, TIIE 28 `SF43783`, TIIE de Fondeo `SF331451`, CETES 28 `SF43936`. INEGI indicator IDs (INPC) get confirmed in M4. Nothing is hardcoded from memory without verification.
+Banxico series IDs, confirmed against the live API on 2026-10-03: FIX `SF43718`, target rate `SF61745`, TIIE 28 `SF43783`, TIIE de Fondeo `SF331451`, CETES 28 `SF43936`. INEGI: INPC general index `910392` (monthly, 2nd fortnight of July 2018 = 100), confirmed with the INEGI catalog API on 2026-10-04; inflation is computed from the index and matches INEGI publications for 2026-08, 2024-12 and 2023-06. Nothing is hardcoded from memory without verification.
 
 ## Milestones
 
