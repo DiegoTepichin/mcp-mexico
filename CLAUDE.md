@@ -40,6 +40,7 @@ uv run pytest                # tests
 uv run ruff check .          # lint
 uv run ruff format --check . # format check
 uv run mypy .                # strict type check
+uv run --env-file .env python scripts/record_fixtures.py  # re-record API fixtures (manual, needs tokens)
 ```
 
 ## Structure
@@ -49,5 +50,6 @@ See `docs/PLAN.md` for the full architecture.
 - `src/mcp_mexico/server.py`: builds the `MCPServer` and registers tools; `main()` is the console entry point.
 - `src/mcp_mexico/tools/`: tool functions exposed over MCP; they turn domain errors into `ToolError`.
 - `src/mcp_mexico/fiscal/`: offline data (`data/*.json`, each with its source) and loaders.
+- `src/mcp_mexico/sources/`: async API clients (Banxico SIE) with in-memory TTL cache and error mapping.
 - `src/mcp_mexico/models.py`: Pydantic models returned by tools; every result carries a `Source`.
-- `tests/`: unit tests plus tool tests through an in-memory `mcp.Client`.
+- `tests/`: unit tests plus tool tests through an in-memory `mcp.Client`. API tests use `httpx.MockTransport` serving `tests/fixtures/`, recorded by `scripts/record_fixtures.py`.
