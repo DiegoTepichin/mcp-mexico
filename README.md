@@ -7,7 +7,9 @@ MCP server that gives AI agents official Mexican public data: Banxico exchange a
 
 [Leer en español](README.es.md)
 
-<!-- Demo GIF goes here before the repo goes public. -->
+![Claude Code answering questions about the FIX exchange rate, inflation and ISR with mcp-mexico](https://raw.githubusercontent.com/DiegoTepichin/mcp-mexico/main/docs/demo.gif)
+
+*Claude Code using `mcp-mexico`. Response wait times are cut from the recording.*
 
 ## Why
 
