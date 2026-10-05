@@ -1,6 +1,6 @@
 [project]
 name = "mcp-mexico"
-version = "0.1.0rc1"
+version = "0.1.0"
 description = "MCP server that gives AI agents access to official Mexican public data: Banxico, INEGI, UMA and ISR tables."
 readme = "README.md"
 license = "MIT"
