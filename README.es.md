@@ -7,7 +7,9 @@ Servidor MCP que da a los agentes de IA datos públicos oficiales de México: ti
 
 [Read in English](README.md)
 
-<!-- GIF de demo antes de hacer público el repo. -->
+![Claude Code respondiendo preguntas sobre el tipo de cambio FIX, la inflación y el ISR con mcp-mexico](https://raw.githubusercontent.com/DiegoTepichin/mcp-mexico/main/docs/demo.gif)
+
+*Claude Code usando `mcp-mexico`. La grabación recorta los tiempos de espera de las respuestas.*
 
 ## Por qué
 
