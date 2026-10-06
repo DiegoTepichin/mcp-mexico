@@ -1,6 +1,6 @@
 # mcp-mexico — v0.1 plan
 
-Status: **approved** (2026-10-02). Started 2026-10-02. Target for v0.1: 2026-10-16.
+Status: **v0.1.0 released** (2026-10-06). Started 2026-10-02. Original target for v0.1: 2026-10-16.
 
 ## Goal
 
@@ -102,14 +102,15 @@ DOF, CFDI, other LATAM countries, hosted server, persistent cache, ISR calculati
 
 ## Launch checklist
 
-- [ ] All milestones merged, CI green on `main`.
-- [ ] README commands executed verbatim on a clean environment.
-- [ ] Demo GIF recorded.
-- [ ] Repo made public (needs your OK).
-- [ ] v0.1.0 published to PyPI and GitHub release created (needs your OK).
+- [x] All milestones merged, CI green on `main`.
+- [x] README commands executed verbatim on a clean environment (`uvx mcp-mexico` and the Claude Code setup, 2026-10-06).
+- [ ] Claude Desktop and Cursor setup from the README confirmed by hand.
+- [x] Demo GIF recorded.
+- [x] Repo made public (2026-10-06).
+- [x] v0.1.0 published to PyPI and GitHub release created (2026-10-06).
 - [ ] Listed in the MCP server registry / community lists.
 - [ ] Posts: Show HN, r/mexico, r/LocalLLaMA, r/ClaudeAI, X.
-- [ ] `ROADMAP.md` updated.
+- [x] `ROADMAP.md` updated.
 
 ## 30-day success metrics (after launch)
 
