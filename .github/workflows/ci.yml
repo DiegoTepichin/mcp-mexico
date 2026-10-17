@@ -15,19 +15,21 @@ concurrency:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.2.0
         with:
           python-version: "3.14"
           enable-cache: true
-      - run: uv sync --locked --all-extras --dev
+      - run: uv sync --locked --dev
       - run: uv run ruff check .
       - run: uv run ruff format --check .
       - run: uv run mypy .
 
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     strategy:
       fail-fast: false
       matrix:
@@ -38,5 +40,27 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           enable-cache: true
-      - run: uv sync --locked --all-extras --dev
+      - run: uv sync --locked --dev
       - run: uv run pytest
+
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.2.0
+        with:
+          python-version: "3.14"
+      - run: uv build --wheel --out-dir dist
+      - run: uv venv "$RUNNER_TEMP/smoke" --python 3.14
+      - run: uv pip install --python "$RUNNER_TEMP/smoke/bin/python" dist/*.whl
+      - name: Offline data ships inside the wheel
+        working-directory: ${{ runner.temp }}
+        run: |
+          "$RUNNER_TEMP/smoke/bin/python" -c "
+          from mcp_mexico.fiscal.isr import isr_table
+          from mcp_mexico.fiscal.uma import uma_for_year
+          assert uma_for_year(2026).daily == 117.31
+          assert isr_table(2026, 'monthly').year == 2026
+          "
+
