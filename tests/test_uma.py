@@ -48,3 +48,12 @@ def test_unknown_year_raises() -> None:
 def test_date_before_coverage_raises() -> None:
     with pytest.raises(DataNotAvailableError):
         uma_in_force(date(2020, 1, 31))
+
+
+def test_latest_uma_still_applies_on_january_31_of_the_following_year() -> None:
+    assert uma_in_force(date(2027, 1, 31)).year == 2026
+
+
+def test_date_after_latest_uma_expires_raises_instead_of_returning_stale_value() -> None:
+    with pytest.raises(DataNotAvailableError, match="Update mcp-mexico"):
+        uma_in_force(date(2027, 2, 1))

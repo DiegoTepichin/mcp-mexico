@@ -3,10 +3,10 @@ from datetime import date
 import pytest
 from mcp import Client
 
-from mcp_mexico.fiscal.uma import uma_in_force
 from mcp_mexico.server import build_server
 from mcp_mexico.sources.banxico import BanxicoClient
 from mcp_mexico.sources.inegi import InegiClient
+from mcp_mexico.tools import fiscal as fiscal_tools
 
 pytestmark = pytest.mark.anyio
 
@@ -41,12 +41,14 @@ async def test_get_uma_by_year() -> None:
     assert result.structured_content["source"]["name"].startswith("INEGI")
 
 
-async def test_get_uma_defaults_to_value_in_force_today() -> None:
+async def test_get_uma_defaults_to_value_in_force_today(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(fiscal_tools, "_today", lambda: date(2026, 6, 1))
+
     async with Client(build_server()) as client:
         result = await client.call_tool("get_uma", {})
 
     assert result.structured_content is not None
-    assert result.structured_content["year"] == uma_in_force(date.today()).year
+    assert result.structured_content["year"] == 2026
 
 
 async def test_get_uma_unknown_year_is_a_tool_error() -> None:
@@ -68,12 +70,16 @@ async def test_get_isr_table_annual() -> None:
     assert result.structured_content["brackets"][-1]["upper_limit"] is None
 
 
-async def test_get_isr_table_defaults_to_current_year_monthly() -> None:
+async def test_get_isr_table_defaults_to_current_year_monthly(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setattr(fiscal_tools, "_today", lambda: date(2026, 6, 1))
+
     async with Client(build_server()) as client:
         result = await client.call_tool("get_isr_table", {})
 
     assert result.structured_content is not None
-    assert result.structured_content["year"] == date.today().year
+    assert result.structured_content["year"] == 2026
     assert result.structured_content["period"] == "monthly"
 
 
