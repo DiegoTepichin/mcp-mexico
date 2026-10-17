@@ -20,7 +20,8 @@ src/mcp_mexico/
     inegi.py       Async httpx client for INEGI Indicators API
   fiscal/
     data/*.json    UMA and ISR tables per year, each with source reference
-    tables.py      Loads and validates the packaged JSON
+    isr.py         Loads and validates the packaged ISR tables
+    uma.py         Loads and validates the packaged UMA values
   tools/
     banxico.py     FIX and interest rate tools
     inegi.py       Inflation tools
@@ -34,7 +35,7 @@ scripts/
 Key decisions:
 
 - **SDK:** official `mcp` Python SDK, pinned to the 2.2.x line.
-- **HTTP:** `httpx` (async). Tests mock it with `respx` and recorded fixtures; no network in tests.
+- **HTTP:** `httpx` (async). Tests mock it with `httpx.MockTransport` and recorded fixtures; no network in tests.
 - **Transport:** stdio only. No hosted server (out of scope).
 - **Cache:** in-memory TTL. Historical data for 24 h, "latest" queries for 1 h. Nothing written to disk.
 - **Offline data:** JSON packaged inside the wheel and validated with Pydantic on load. Each table includes `year`, `valid_from`, `source` (document name and URL) and `verified_on`.
@@ -94,7 +95,7 @@ Each milestone gets its own branch and PR, and merges only with green CI.
 - **Tool level:** every tool is called through an in-memory MCP client to check its schemas and outputs.
 - **Errors:** missing token, HTTP 401/500, timeouts, dates with no data (weekends, future dates).
 - **No network in CI.** Fixtures are refreshed by hand with `scripts/record_fixtures.py`.
-- Every PR must pass `ruff check`, `ruff format --check`, `mypy --strict` and `pytest`. Coverage gets reported, with no hard gate.
+- Every PR must pass `ruff check`, `ruff format --check`, `mypy --strict` and `pytest`.
 
 ## Out of scope for v0.1 (later list)
 

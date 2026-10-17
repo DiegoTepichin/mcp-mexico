@@ -30,6 +30,8 @@ AI assistants either make up Mexican economic figures or use stale ones, so you 
 
 `get_uma` and `get_isr_table` work offline with no configuration. Their data ships inside the package; each table cites the document it was taken from and the date it was verified.
 
+The bundled UMA covers up to 2026. From 1 February 2027, `get_uma` returns an error until the package is updated, instead of a stale value.
+
 ## Get your tokens
 
 Both are free and take a couple of minutes.

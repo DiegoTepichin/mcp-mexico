@@ -30,6 +30,8 @@ Los asistentes de IA inventan las cifras económicas de México o usan datos vie
 
 `get_uma` y `get_isr_table` funcionan sin conexión y sin configurar nada. Sus datos vienen dentro del paquete; cada tabla cita el documento del que salió y la fecha en que se verificó.
 
+La UMA incluida llega hasta 2026. Desde el 1 de febrero de 2027, `get_uma` devuelve un error hasta que se actualice el paquete, en lugar de un valor desactualizado.
+
 ## Consigue tus tokens
 
 Los dos son gratuitos y se obtienen en un par de minutos.
