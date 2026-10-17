@@ -78,12 +78,15 @@ def _payload_or_raise(response: httpx.Response) -> _Payload:
 
 
 def _parse_monthly_series(payload: _Payload) -> dict[Month, float]:
-    observations = payload["Series"][0]["OBSERVATIONS"]
-    return {
-        _parse_month(point["TIME_PERIOD"]): float(point["OBS_VALUE"])
-        for point in observations
-        if point["OBS_VALUE"]
-    }
+    try:
+        observations = payload["Series"][0]["OBSERVATIONS"]
+        return {
+            _parse_month(point["TIME_PERIOD"]): float(point["OBS_VALUE"])
+            for point in observations
+            if point["OBS_VALUE"]
+        }
+    except (AttributeError, IndexError, KeyError, TypeError, ValueError) as error:
+        raise UpstreamError("INEGI API returned an unexpected response format.") from error
 
 
 def _parse_month(raw: str) -> Month:

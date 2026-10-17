@@ -51,3 +51,34 @@ async def test_network_failure_does_not_leak_the_url() -> None:
     with pytest.raises(UpstreamError) as raised:
         await client.inpc()
     assert "secret-token" not in str(raised.value)
+
+
+async def test_series_without_observations_is_an_upstream_error() -> None:
+    client, _ = inegi_client(lambda _: httpx.Response(200, json={"Series": []}))
+
+    with pytest.raises(UpstreamError, match="unexpected response format"):
+        await client.inpc()
+
+
+async def test_malformed_observation_is_an_upstream_error() -> None:
+    body = {"Series": [{"OBSERVATIONS": [{"TIME_PERIOD": "2026-08", "OBS_VALUE": "145.4"}]}]}
+    client, _ = inegi_client(lambda _: httpx.Response(200, json=body))
+
+    with pytest.raises(UpstreamError, match="unexpected response format"):
+        await client.inpc()
+
+
+async def test_empty_values_are_skipped() -> None:
+    body = {
+        "Series": [
+            {
+                "OBSERVATIONS": [
+                    {"TIME_PERIOD": "2026/08", "OBS_VALUE": ""},
+                    {"TIME_PERIOD": "2026/07", "OBS_VALUE": "145.0"},
+                ]
+            }
+        ]
+    }
+    client, _ = inegi_client(lambda _: httpx.Response(200, json=body))
+
+    assert await client.inpc() == {(2026, 7): 145.0}

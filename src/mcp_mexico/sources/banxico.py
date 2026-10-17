@@ -15,6 +15,7 @@ TOKEN_URL = "https://www.banxico.org.mx/SieAPIRest/service/v1/token"
 LATEST_TTL_SECONDS = 60 * 60
 HISTORICAL_TTL_SECONDS = 24 * 60 * 60
 TIMEOUT_SECONDS = 15.0
+UNEXPECTED_FORMAT_MESSAGE = "Banxico SIE API returned an unexpected response format."
 
 InterestRateName = Literal["target", "tiie_28", "tiie_funding", "cetes_28"]
 
@@ -122,10 +123,7 @@ class BanxicoClient:
 
 
 def _payload_or_raise(response: httpx.Response) -> _Payload:
-    try:
-        payload: _Payload = response.json()
-    except ValueError:
-        payload = {}
+    payload = _json_object(response)
     error = payload.get("error")
     if isinstance(error, dict):
         message = " ".join(str(error.get(key, "")) for key in ("mensaje", "detalle")).strip()
@@ -135,13 +133,26 @@ def _payload_or_raise(response: httpx.Response) -> _Payload:
     return payload
 
 
+def _json_object(response: httpx.Response) -> _Payload:
+    try:
+        body: object = response.json()
+    except ValueError:
+        return {}
+    return body if isinstance(body, dict) else {}
+
+
 def _parse_observations(payload: _Payload) -> list[Observation]:
-    series = payload["bmx"]["series"][0]
-    return [
-        Observation(date=_parse_date(point["fecha"]), value=float(point["dato"].replace(",", "")))
-        for point in series.get("datos", [])
-        if point["dato"] != "N/E"
-    ]
+    try:
+        series = payload["bmx"]["series"][0]
+        return [
+            Observation(
+                date=_parse_date(point["fecha"]), value=float(point["dato"].replace(",", ""))
+            )
+            for point in series.get("datos", [])
+            if point["dato"] != "N/E"
+        ]
+    except (AttributeError, IndexError, KeyError, TypeError, ValueError) as error:
+        raise UpstreamError(UNEXPECTED_FORMAT_MESSAGE) from error
 
 
 def _parse_date(raw: str) -> date:
