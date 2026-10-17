@@ -101,3 +101,37 @@ async def test_skips_values_marked_not_available() -> None:
     client, _ = banxico_client(lambda _: httpx.Response(200, json=body))
 
     assert await client.latest(FIX) == Observation(date=date(2026, 10, 2), value=1018.19)
+
+
+@pytest.mark.parametrize(
+    "body",
+    [
+        {"bmx": {"series": []}},
+        {"bmx": {"series": [{"datos": [{"fecha": "02/10/2026"}]}]}},
+        {"bmx": {"series": [{"datos": [{"fecha": "2026-10-02", "dato": "18.19"}]}]}},
+        {"bmx": {"series": [{"datos": [{"fecha": "02/10/2026", "dato": "not a number"}]}]}},
+        {"bmx": {"series": [{"datos": [{"fecha": "02/10/2026", "dato": None}]}]}},
+    ],
+)
+async def test_unexpected_body_shape_is_an_upstream_error(body: object) -> None:
+    client, _ = banxico_client(lambda _: httpx.Response(200, json=body))
+
+    with pytest.raises(UpstreamError, match="unexpected"):
+        await client.latest(FIX)
+
+
+async def test_timeout_is_an_upstream_error() -> None:
+    def time_out(request: httpx.Request) -> httpx.Response:
+        raise httpx.ReadTimeout("timed out", request=request)
+
+    client, _ = banxico_client(time_out)
+
+    with pytest.raises(UpstreamError, match="Could not reach"):
+        await client.latest(FIX)
+
+
+async def test_list_body_is_an_upstream_error() -> None:
+    client, _ = banxico_client(lambda _: httpx.Response(200, json=["unexpected", "list"]))
+
+    with pytest.raises(UpstreamError, match="unexpected HTTP 200"):
+        await client.latest(FIX)
