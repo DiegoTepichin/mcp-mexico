@@ -6,7 +6,7 @@ import pytest
 from mcp_mexico.errors import MissingTokenError, UpstreamError
 from mcp_mexico.models import Observation
 from mcp_mexico.sources.banxico import FIX, INTEREST_RATES
-from tests.conftest import FAKE_TOKEN, banxico_client
+from tests.conftest import FAKE_TOKEN, banxico_client, serve_banxico_fixtures
 
 pytestmark = pytest.mark.anyio
 
@@ -134,4 +134,53 @@ async def test_list_body_is_an_upstream_error() -> None:
     client, _ = banxico_client(lambda _: httpx.Response(200, json=["unexpected", "list"]))
 
     with pytest.raises(UpstreamError, match="unexpected HTTP 200"):
+        await client.latest(FIX)
+
+
+async def test_transient_network_failure_is_retried_once() -> None:
+    calls = 0
+
+    def flaky(request: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        if calls == 1:
+            raise httpx.ConnectError("connection reset", request=request)
+        return serve_banxico_fixtures(request)
+
+    client, transport = banxico_client(flaky)
+
+    assert (await client.latest(FIX)).value == 18.1903
+    assert len(transport.requests) == 2
+
+
+async def test_gateway_error_is_retried_once() -> None:
+    calls = 0
+
+    def flaky(request: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        if calls == 1:
+            return httpx.Response(503, text="busy")
+        return serve_banxico_fixtures(request)
+
+    client, _ = banxico_client(flaky)
+
+    assert (await client.latest(FIX)).value == 18.1903
+
+
+async def test_persistent_network_failure_gives_up_after_two_attempts() -> None:
+    def fail(request: httpx.Request) -> httpx.Response:
+        raise httpx.ConnectError("connection refused", request=request)
+
+    client, transport = banxico_client(fail)
+
+    with pytest.raises(UpstreamError, match="Could not reach"):
+        await client.latest(FIX)
+    assert len(transport.requests) == 2
+
+
+async def test_rate_limit_has_actionable_message() -> None:
+    client, _ = banxico_client(lambda _: httpx.Response(429, text="too many requests"))
+
+    with pytest.raises(UpstreamError, match="rate limit"):
         await client.latest(FIX)

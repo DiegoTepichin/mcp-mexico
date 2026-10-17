@@ -115,3 +115,10 @@ async def test_missing_token_explains_how_to_get_one() -> None:
 
     assert result.is_error
     assert "INEGI_TOKEN is not set" in str(result.content)
+
+
+async def test_range_reports_the_months_actually_returned(inegi: InegiClient) -> None:
+    result = await _call("get_inflation_range", {"start": "2026-06", "end": "2026-12"}, inegi)
+
+    assert result.structured_content["start"] == "2026-06"
+    assert result.structured_content["end"] == "2026-08"

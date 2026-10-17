@@ -37,6 +37,8 @@ class InegiTools:
         """Get Mexican consumer price inflation (INPC, INEGI) for each month in a range.
 
         `start` and `end` are inclusive, as YYYY-MM, at most 240 months apart.
+        The returned `start` and `end` are the first and last months with data,
+        which can be earlier than requested when the latest INPC is not yet published.
         """
         with as_tool_error():
             first, last = _parse_year_month(start), _parse_year_month(end)
@@ -45,10 +47,11 @@ class InegiTools:
             months = [m for m in sorted(series) if first <= m <= last]
             if not months:
                 raise DataNotAvailableError(f"INEGI has no INPC values between {start} and {end}.")
+            periods = [_period(series, m) for m in months]
             return InflationSeries(
-                start=start,
-                end=end,
-                periods=[_period(series, m) for m in months],
+                start=periods[0].period,
+                end=periods[-1].period,
+                periods=periods,
                 source=INPC_SOURCE,
             )
 

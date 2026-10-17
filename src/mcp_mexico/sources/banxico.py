@@ -9,6 +9,7 @@ from mcp_mexico.cache import TtlCache
 from mcp_mexico.config import BANXICO_TOKEN_VAR, read_token
 from mcp_mexico.errors import DataNotAvailableError, MissingTokenError, UpstreamError
 from mcp_mexico.models import Observation, Source
+from mcp_mexico.sources.http import get_with_retry
 
 BASE_URL = "https://www.banxico.org.mx/SieAPIRest/service/v1/series"
 TOKEN_URL = "https://www.banxico.org.mx/SieAPIRest/service/v1/token"
@@ -114,11 +115,13 @@ class BanxicoClient:
                 "to the MCP server's environment."
             )
         try:
-            response = await self._http.get(
-                f"{BASE_URL}/{path}", headers={"Bmx-Token": self._token}
+            response = await get_with_retry(
+                self._http, f"{BASE_URL}/{path}", headers={"Bmx-Token": self._token}
             )
         except httpx.HTTPError as error:
-            raise UpstreamError(f"Could not reach the Banxico SIE API: {error!r}") from error
+            raise UpstreamError(
+                f"Could not reach the Banxico SIE API ({type(error).__name__})."
+            ) from error
         return _payload_or_raise(response)
 
 
@@ -128,6 +131,8 @@ def _payload_or_raise(response: httpx.Response) -> _Payload:
     if isinstance(error, dict):
         message = " ".join(str(error.get(key, "")) for key in ("mensaje", "detalle")).strip()
         raise UpstreamError(f"Banxico SIE API error (HTTP {response.status_code}): {message}")
+    if response.status_code == 429:
+        raise UpstreamError("Banxico SIE API rate limit reached. Wait a minute and try again.")
     if response.is_error or "bmx" not in payload:
         raise UpstreamError(f"Banxico SIE API returned an unexpected HTTP {response.status_code}.")
     return payload
