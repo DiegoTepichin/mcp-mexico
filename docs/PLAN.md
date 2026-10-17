@@ -104,7 +104,7 @@ DOF, CFDI, other LATAM countries, hosted server, persistent cache, ISR calculati
 
 - [x] All milestones merged, CI green on `main`.
 - [x] README commands executed verbatim on a clean environment (`uvx mcp-mexico` and the Claude Code setup, 2026-10-06).
-- [ ] Claude Desktop and Cursor setup from the README confirmed by hand.
+- [x] Claude Desktop and Cursor setup from the README confirmed by hand (2026-10-17).
 - [x] Demo GIF recorded.
 - [x] Repo made public (2026-10-06).
 - [x] v0.1.0 published to PyPI and GitHub release created (2026-10-06).
