@@ -6,6 +6,7 @@ from mcp_mexico.cache import TtlCache
 from mcp_mexico.config import INEGI_TOKEN_VAR, read_token
 from mcp_mexico.errors import MissingTokenError, UpstreamError
 from mcp_mexico.models import Source
+from mcp_mexico.sources.http import get_with_retry
 
 BASE_URL = "https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml"
 TOKEN_URL = "https://www.inegi.org.mx/app/desarrolladores/generatoken/Usuarios/token_Verify"
@@ -50,8 +51,8 @@ class InegiClient:
                 "to the MCP server's environment."
             )
         try:
-            response = await self._http.get(
-                f"{BASE_URL}/{path}/{self._token}", params={"type": "json"}
+            response = await get_with_retry(
+                self._http, f"{BASE_URL}/{path}/{self._token}", params={"type": "json"}
             )
         except httpx.HTTPError as error:
             # The token is part of the URL, so the exception text is not echoed back.
@@ -72,6 +73,8 @@ def _payload_or_raise(response: httpx.Response) -> _Payload:
             f"INEGI API error (HTTP {response.status_code}): {details}. INEGI also answers "
             f"this way when {INEGI_TOKEN_VAR} is invalid or not yet activated."
         )
+    if response.status_code == 429:
+        raise UpstreamError("INEGI API rate limit reached. Wait a minute and try again.")
     if response.is_error or not isinstance(payload, dict) or "Series" not in payload:
         raise UpstreamError(f"INEGI API returned an unexpected HTTP {response.status_code}.")
     return payload

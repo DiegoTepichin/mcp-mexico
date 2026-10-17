@@ -82,3 +82,10 @@ async def test_empty_values_are_skipped() -> None:
     client, _ = inegi_client(lambda _: httpx.Response(200, json=body))
 
     assert await client.inpc() == {(2026, 7): 145.0}
+
+
+async def test_rate_limit_has_actionable_message() -> None:
+    client, _ = inegi_client(lambda _: httpx.Response(429, text="too many requests"))
+
+    with pytest.raises(UpstreamError, match="rate limit"):
+        await client.inpc()

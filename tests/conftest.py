@@ -4,6 +4,7 @@ from pathlib import Path
 import httpx
 import pytest
 
+from mcp_mexico.sources import http as http_helpers
 from mcp_mexico.sources.banxico import BASE_URL as BANXICO_BASE_URL
 from mcp_mexico.sources.banxico import BanxicoClient
 from mcp_mexico.sources.inegi import BASE_URL as INEGI_BASE_URL
@@ -18,6 +19,11 @@ Handler = Callable[[httpx.Request], httpx.Response]
 @pytest.fixture
 def anyio_backend() -> str:
     return "asyncio"
+
+
+@pytest.fixture(autouse=True)
+def no_retry_delay(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(http_helpers, "RETRY_DELAY_SECONDS", 0)
 
 
 class RecordingTransport(httpx.MockTransport):
