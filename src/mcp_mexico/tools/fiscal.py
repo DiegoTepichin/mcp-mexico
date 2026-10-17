@@ -6,6 +6,10 @@ from mcp_mexico.models import IsrPeriod, IsrTable, Uma
 from mcp_mexico.tools._errors import as_tool_error
 
 
+def _today() -> date:
+    return date.today()
+
+
 def get_uma(year: int | None = None) -> Uma:
     """Get the official UMA (Unidad de Medida y Actualización) in Mexican pesos.
 
@@ -14,7 +18,7 @@ def get_uma(year: int | None = None) -> Uma:
     UMA takes effect on February 1, so in January the previous year's value applies.
     """
     with as_tool_error():
-        return uma_in_force(date.today()) if year is None else uma_for_year(year)
+        return uma_in_force(_today()) if year is None else uma_for_year(year)
 
 
 def get_isr_table(year: int | None = None, period: IsrPeriod = "monthly") -> IsrTable:
@@ -27,4 +31,4 @@ def get_isr_table(year: int | None = None, period: IsrPeriod = "monthly") -> Isr
     * rate_percent / 100.
     """
     with as_tool_error():
-        return isr_table(date.today().year if year is None else year, period)
+        return isr_table(_today().year if year is None else year, period)

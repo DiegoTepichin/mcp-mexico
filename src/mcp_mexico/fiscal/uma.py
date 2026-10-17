@@ -46,7 +46,13 @@ def uma_in_force(on: date) -> Uma:
     in_force = [record for record in _load().values if record.valid_from <= on]
     if not in_force:
         raise DataNotAvailableError(f"No UMA data in force on {on.isoformat()}.")
-    return uma_for_year(in_force[-1].year)
+    latest = in_force[-1]
+    if on >= date(latest.year + 1, 2, 1):
+        raise DataNotAvailableError(
+            f"No UMA data in force on {on.isoformat()}: this package only has UMA up to "
+            f"{latest.year}. Update mcp-mexico to get the current value."
+        )
+    return uma_for_year(latest.year)
 
 
 def _to_uma(record: _UmaRecord, successor: _UmaRecord | None, source: VerifiedSource) -> Uma:
