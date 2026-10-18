@@ -1,13 +1,8 @@
-from datetime import date
-
+from mcp_mexico.clock import today_mx
 from mcp_mexico.fiscal.isr import isr_table
 from mcp_mexico.fiscal.uma import uma_for_year, uma_in_force
 from mcp_mexico.models import IsrPeriod, IsrTable, Uma
 from mcp_mexico.tools._errors import as_tool_error
-
-
-def _today() -> date:
-    return date.today()
 
 
 def get_uma(year: int | None = None) -> Uma:
@@ -18,7 +13,7 @@ def get_uma(year: int | None = None) -> Uma:
     UMA takes effect on February 1, so in January the previous year's value applies.
     """
     with as_tool_error():
-        return uma_in_force(_today()) if year is None else uma_for_year(year)
+        return uma_in_force(today_mx()) if year is None else uma_for_year(year)
 
 
 def get_isr_table(year: int | None = None, period: IsrPeriod = "monthly") -> IsrTable:
@@ -31,4 +26,4 @@ def get_isr_table(year: int | None = None, period: IsrPeriod = "monthly") -> Isr
     * rate_percent / 100.
     """
     with as_tool_error():
-        return isr_table(_today().year if year is None else year, period)
+        return isr_table(today_mx().year if year is None else year, period)

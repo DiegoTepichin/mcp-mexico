@@ -6,6 +6,7 @@ from typing import Any, Literal
 import httpx
 
 from mcp_mexico.cache import TtlCache
+from mcp_mexico.clock import today_mx
 from mcp_mexico.config import BANXICO_TOKEN_VAR, read_token
 from mcp_mexico.errors import DataNotAvailableError, MissingTokenError, UpstreamError
 from mcp_mexico.models import Observation, Source
@@ -74,7 +75,7 @@ class BanxicoClient:
         self,
         token: str | None,
         http: httpx.AsyncClient,
-        today: Callable[[], date] = date.today,
+        today: Callable[[], date] = today_mx,
     ) -> None:
         self._token = token
         self._http = http

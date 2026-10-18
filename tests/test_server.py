@@ -42,7 +42,7 @@ async def test_get_uma_by_year() -> None:
 
 
 async def test_get_uma_defaults_to_value_in_force_today(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setattr(fiscal_tools, "_today", lambda: date(2026, 6, 1))
+    monkeypatch.setattr(fiscal_tools, "today_mx", lambda: date(2026, 6, 1))
 
     async with Client(build_server()) as client:
         result = await client.call_tool("get_uma", {})
@@ -73,7 +73,7 @@ async def test_get_isr_table_annual() -> None:
 async def test_get_isr_table_defaults_to_current_year_monthly(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    monkeypatch.setattr(fiscal_tools, "_today", lambda: date(2026, 6, 1))
+    monkeypatch.setattr(fiscal_tools, "today_mx", lambda: date(2026, 6, 1))
 
     async with Client(build_server()) as client:
         result = await client.call_tool("get_isr_table", {})
