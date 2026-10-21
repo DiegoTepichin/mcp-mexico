@@ -109,7 +109,8 @@ DOF, CFDI, other LATAM countries, hosted server, persistent cache, ISR calculati
 - [x] Demo GIF recorded.
 - [x] Repo made public (2026-10-06).
 - [x] v0.1.0 published to PyPI and GitHub release created (2026-10-06).
-- [ ] Listed in the MCP server registry / community lists.
+- [x] Listed in the official MCP Registry as `io.github.DiegoTepichin/mcp-mexico` (0.1.3, 2026-10-21).
+- [ ] Listed in community lists (e.g. awesome-mcp-servers).
 - [ ] Posts: Show HN, r/mexico, r/LocalLLaMA, r/ClaudeAI, X.
 - [x] `ROADMAP.md` updated.
 
