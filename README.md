@@ -2,6 +2,8 @@
 
 MCP server that gives AI agents official Mexican public data: Banxico exchange and interest rates, INEGI inflation, UMA values and ISR tax tables.
 
+<!-- mcp-name: io.github.DiegoTepichin/mcp-mexico -->
+
 [![CI](https://github.com/DiegoTepichin/mcp-mexico/actions/workflows/ci.yml/badge.svg)](https://github.com/DiegoTepichin/mcp-mexico/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
