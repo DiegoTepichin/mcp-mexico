@@ -46,7 +46,7 @@ Key decisions:
 
 | Tool | Input | Returns | Source |
 |---|---|---|---|
-| `get_fix_rate` | optional `date` | FIX USD/MXN for that date, or the latest | Banxico SIE |
+| `get_fix_rate` | optional `date` | FIX USD/MXN for that date, or the latest; future dates are rejected | Banxico SIE |
 | `get_fix_rate_range` | `start`, `end` | FIX series | Banxico SIE |
 | `get_interest_rate` | `rate` (`target`, `tiie_28`, `tiie_funding`, `cetes_28`), optional `date` | Latest value, or the value on/before a date | Banxico SIE |
 | `get_interest_rate_range` | `rate`, `start`, `end` | Series | Banxico SIE |

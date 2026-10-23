@@ -1,3 +1,4 @@
+from datetime import date
 from typing import Any
 
 import pytest
@@ -5,6 +6,7 @@ from mcp import Client
 
 from mcp_mexico.server import build_server
 from mcp_mexico.sources.banxico import BanxicoClient
+from mcp_mexico.tools import banxico as banxico_tools
 from tests.conftest import banxico_client
 
 pytestmark = pytest.mark.anyio
@@ -65,6 +67,36 @@ async def test_invalid_ranges_are_rejected_without_calling_banxico(
     assert result.is_error
     assert message in str(result.content)
     assert transport.requests == []
+
+
+@pytest.mark.parametrize(
+    ("tool", "arguments"),
+    [
+        ("get_fix_rate", {"date": "2026-09-28"}),
+        ("get_interest_rate", {"rate": "target", "date": "2026-09-28"}),
+    ],
+)
+async def test_future_date_is_rejected_without_calling_banxico(
+    tool: str, arguments: dict[str, Any], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setattr(banxico_tools, "today_mx", lambda: date(2026, 9, 27))
+    client, transport = banxico_client()
+
+    result = await _call(tool, arguments, client)
+
+    assert result.is_error
+    assert "in the future" in str(result.content)
+    assert transport.requests == []
+
+
+async def test_today_is_an_accepted_date(
+    banxico: BanxicoClient, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setattr(banxico_tools, "today_mx", lambda: date(2026, 9, 27))
+
+    result = await _call("get_fix_rate", {"date": "2026-09-27"}, banxico)
+
+    assert result.structured_content["date"] == "2026-09-25"
 
 
 @pytest.mark.parametrize(

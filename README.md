@@ -21,9 +21,9 @@ AI assistants either make up Mexican economic figures or use stale ones, so you 
 
 | Tool | What it returns | Source | Token |
 |---|---|---|---|
-| `get_fix_rate` | FIX USD/MXN exchange rate, latest or for a date. On weekends and holidays it returns the previous business day. | Banxico SIE | `BANXICO_TOKEN` |
+| `get_fix_rate` | FIX USD/MXN exchange rate, latest or for a date. On weekends and holidays it returns the previous business day. Future dates are rejected. | Banxico SIE | `BANXICO_TOKEN` |
 | `get_fix_rate_range` | Daily FIX between two dates (max 366 days). | Banxico SIE | `BANXICO_TOKEN` |
-| `get_interest_rate` | Banxico target rate, 28-day TIIE, overnight TIIE de Fondeo or 28-day CETES; latest or for a date. | Banxico SIE | `BANXICO_TOKEN` |
+| `get_interest_rate` | Banxico target rate, 28-day TIIE, overnight TIIE de Fondeo or 28-day CETES; latest or for a date. Future dates are rejected. | Banxico SIE | `BANXICO_TOKEN` |
 | `get_interest_rate_range` | One of those rates between two dates (max 366 days). | Banxico SIE | `BANXICO_TOKEN` |
 | `get_inflation` | INPC index and monthly, annual and year-to-date inflation for a month (latest by default). | INEGI | `INEGI_TOKEN` |
 | `get_inflation_range` | The same for each month in a range (max 240 months). | INEGI | `INEGI_TOKEN` |

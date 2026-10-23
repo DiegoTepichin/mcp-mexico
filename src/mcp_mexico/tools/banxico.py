@@ -1,5 +1,6 @@
 from datetime import date, timedelta
 
+from mcp_mexico.clock import today_mx
 from mcp_mexico.errors import DataNotAvailableError, InvalidRequestError
 from mcp_mexico.models import IndicatorSeries, IndicatorValue, Observation
 from mcp_mexico.sources.banxico import (
@@ -26,7 +27,8 @@ class BanxicoTools:
 
         Without `date`, returns the latest FIX. With `date`, returns the FIX for that
         day; on weekends and holidays there is no FIX, so it returns the most recent
-        one before that day. Check the `date` field of the result.
+        one before that day. Check the `date` field of the result. Dates after today
+        (Mexico City time) are rejected.
         """
         with as_tool_error():
             return await self._value_on_or_before(FIX, date)
@@ -48,6 +50,7 @@ class BanxicoTools:
         (overnight TIIE de Fondeo) and `cetes_28` (28-day CETES, weekly auction).
         Without `date`, returns the latest value. With `date`, returns the value for
         that day or the most recent one before it. Check the `date` field of the result.
+        Dates after today (Mexico City time) are rejected.
         """
         with as_tool_error():
             return await self._value_on_or_before(INTEREST_RATES[rate], date)
@@ -79,6 +82,7 @@ class BanxicoTools:
     ) -> Observation:
         if day is None:
             return await self._client.latest(series)
+        _validate_not_future(day)
         observations = await self._client.observations(
             series, day - timedelta(days=LOOKBACK_DAYS), day
         )
@@ -105,6 +109,15 @@ class BanxicoTools:
             end=end,
             observations=observations,
             source=series.source,
+        )
+
+
+def _validate_not_future(day: date) -> None:
+    today = today_mx()
+    if day > today:
+        raise InvalidRequestError(
+            f"{day.isoformat()} is in the future; today in Mexico City is "
+            f"{today.isoformat()}. Omit `date` for the latest value."
         )
 
 
