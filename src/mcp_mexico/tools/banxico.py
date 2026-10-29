@@ -34,7 +34,8 @@ class BanxicoTools:
     async def get_fix_rate_range(self, start: date, end: date) -> IndicatorSeries:
         """Get the daily FIX USD/MXN exchange rate between two dates (inclusive, max 366 days).
 
-        Only business days have a value.
+        Only business days have a value. The returned `start` and `end` are the first
+        and last days with data, which can be inside the requested range.
         """
         with as_tool_error():
             return await self._series(FIX, start, end)
@@ -58,7 +59,8 @@ class BanxicoTools:
         """Get a key Mexican interest rate between two dates (inclusive, max 366 days).
 
         Rates: `target`, `tiie_28`, `tiie_funding` and `cetes_28` (weekly). Values are
-        in percent per year.
+        in percent per year. The returned `start` and `end` are the first and last days
+        with data, which can be inside the requested range.
         """
         with as_tool_error():
             return await self._series(INTEREST_RATES[rate], start, end)
@@ -101,8 +103,8 @@ class BanxicoTools:
             indicator=series.indicator,
             description=series.description,
             unit=series.unit,
-            start=start,
-            end=end,
+            start=observations[0].date,
+            end=observations[-1].date,
             observations=observations,
             source=series.source,
         )
