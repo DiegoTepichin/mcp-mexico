@@ -53,4 +53,5 @@ See `docs/PLAN.md` for the full architecture.
 - `src/mcp_mexico/sources/`: async API clients (Banxico SIE, INEGI Indicators) with in-memory TTL cache and error mapping.
 - `src/mcp_mexico/models.py`: Pydantic models returned by tools; every result carries a `Source`.
 - `server.json`: MCP Registry metadata. Its versions must match `pyproject.toml`, and `README.md` must keep the `mcp-name` comment (both checked by `tests/test_server_json.py`).
+- `evals/`: truth-gap evaluation (`questions.json`, `runner.py`, `report.py`); run with `uv run --env-file .env python -m evals run|report`. Results are saved in `evals/results/`.
 - `tests/`: unit tests plus tool tests through an in-memory `mcp.Client`. API tests use `httpx.MockTransport` serving `tests/fixtures/`, recorded by `scripts/record_fixtures.py`.

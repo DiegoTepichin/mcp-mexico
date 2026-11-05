@@ -1,0 +1,1190 @@
+[
+  {
+    "question_id": "fix-2025-03-14",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 19.9555",
+    "parsed": 19.9555,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue el tipo de cambio FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 14 de marzo de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 19.9555"
+      }
+    ]
+  },
+  {
+    "question_id": "fix-2024-06-03",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 21.5555",
+    "parsed": 21.5555,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue el tipo de cambio FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 3 de junio de 2024?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 21.5555"
+      }
+    ]
+  },
+  {
+    "question_id": "fix-2026-01-15",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 19.9555",
+    "parsed": 19.9555,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue el tipo de cambio FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 15 de enero de 2026?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 19.9555"
+      }
+    ]
+  },
+  {
+    "question_id": "target-2025-08-15",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "1.5",
+    "parsed": 1.5,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l era la tasa objetivo de pol\u00edtica monetaria de Banco de M\u00e9xico, en porcentaje anual, el 15 de agosto de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "1.5"
+      }
+    ]
+  },
+  {
+    "question_id": "tiie28-2025-12-19",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "1.5",
+    "parsed": 1.5,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la TIIE a 28 d\u00edas, en porcentaje anual, el 19 de diciembre de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "1.5"
+      }
+    ]
+  },
+  {
+    "question_id": "cetes28-2025-06-26",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 1.50",
+    "parsed": 1.5,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la tasa de rendimiento de los CETES a 28 d\u00edas, en porcentaje anual, en la subasta primaria del 26 de junio de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 1.50"
+      }
+    ]
+  },
+  {
+    "question_id": "inflation-annual-2025-06",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "1.5",
+    "parsed": 1.5,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la inflaci\u00f3n anual de M\u00e9xico (INPC), en porcentaje, en junio de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "1.5"
+      }
+    ]
+  },
+  {
+    "question_id": "inflation-monthly-2025-01",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "1.4%",
+    "parsed": 1.4,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la inflaci\u00f3n mensual de M\u00e9xico (INPC), en porcentaje, en enero de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "1.4%"
+      }
+    ]
+  },
+  {
+    "question_id": "inflation-annual-2024-12",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "1.5",
+    "parsed": 1.5,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la inflaci\u00f3n anual de M\u00e9xico (INPC), en porcentaje, en diciembre de 2024?"
+      },
+      {
+        "role": "assistant",
+        "content": "1.5"
+      }
+    ]
+  },
+  {
+    "question_id": "inpc-2025-06",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "115.4",
+    "parsed": 115.4,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue el valor del \u00edndice INPC general (base segunda quincena de julio de 2018 = 100) en junio de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "115.4"
+      }
+    ]
+  },
+  {
+    "question_id": "uma-2025-daily",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "[request failed: ReadTimeout]",
+    "parsed": null,
+    "outcome": "no_answer",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l es el valor diario de la UMA (Unidad de Medida y Actualizaci\u00f3n) vigente en 2025, en pesos?"
+      },
+      {
+        "role": "assistant",
+        "content": "[request failed: ReadTimeout]"
+      }
+    ]
+  },
+  {
+    "question_id": "uma-2024-monthly",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 1,250.000.000.000\n\nEsta cifra se basa en la informaci\u00f3n oficial del Banco de M\u00e9xico, que no ha cambiado significativamente desde 2020.",
+    "parsed": 0.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l es el valor mensual de la UMA vigente en 2024, en pesos?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 1,250.000.000.000\n\nEsta cifra se basa en la informaci\u00f3n oficial del Banco de M\u00e9xico, que no ha cambiado significativamente desde 2020."
+      }
+    ]
+  },
+  {
+    "question_id": "uma-2026-annual",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 1,250,000,000",
+    "parsed": 1250000000.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l es el valor anual de la UMA vigente en 2026, en pesos?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 1,250,000,000"
+      }
+    ]
+  },
+  {
+    "question_id": "uma-2023-daily",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 15.5",
+    "parsed": 15.5,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l es el valor diario de la UMA vigente en 2023, en pesos?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 15.5"
+      }
+    ]
+  },
+  {
+    "question_id": "isr-2025-monthly-fee",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 1000",
+    "parsed": 1000.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "Seg\u00fan la tabla mensual del ISR de personas f\u00edsicas de 2025 (art\u00edculo 96 de la LISR), \u00bfcu\u00e1l es la cuota fija, en pesos, para un ingreso mensual de $20,000.00?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 1000"
+      }
+    ]
+  },
+  {
+    "question_id": "isr-2025-monthly-rate",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "10%",
+    "parsed": 10.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "Seg\u00fan la tabla mensual del ISR de personas f\u00edsicas de 2025 (art\u00edculo 96 de la LISR), \u00bfqu\u00e9 porcentaje se aplica sobre el excedente del l\u00edmite inferior para un ingreso mensual de $60,000.00?"
+      },
+      {
+        "role": "assistant",
+        "content": "10%"
+      }
+    ]
+  },
+  {
+    "question_id": "isr-2026-annual-fee",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 1500000.00",
+    "parsed": 1500000.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "Seg\u00fan la tabla anual del ISR de personas f\u00edsicas de 2026 (art\u00edculo 152 de la LISR), \u00bfcu\u00e1l es la cuota fija, en pesos, para un ingreso anual gravable de $500,000.00?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 1500000.00"
+      }
+    ]
+  },
+  {
+    "question_id": "isr-2024-monthly-lower",
+    "model": "qwen2.5:1.5b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 100000000",
+    "parsed": 100000000.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro, y sin redondear: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "En la tabla mensual del ISR de personas f\u00edsicas de 2024 (art\u00edculo 96 de la LISR), \u00bfcu\u00e1l es el l\u00edmite inferior, en pesos, del rengl\u00f3n cuya tasa sobre el excedente es 23.52%?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 100000000"
+      }
+    ]
+  },
+  {
+    "question_id": "fix-2025-03-14",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "El FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 14 de marzo de 2025 era de 19.8693 MXN por USD.",
+    "parsed": 19.8693,
+    "outcome": "correct",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue el tipo de cambio FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 14 de marzo de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_jnx7uhq6",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_fix_rate",
+              "arguments": "{\"date\":\"2025-03-14\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_jnx7uhq6",
+        "content": "{\"indicator\": \"fix\", \"description\": \"FIX exchange rate determined by Banco de M\\u00e9xico, used to settle USD obligations in Mexico.\", \"unit\": \"MXN per USD\", \"date\": \"2025-03-14\", \"value\": 19.8693, \"source\": {\"name\": \"Banco de M\\u00e9xico, SIE series SF43718\", \"url\": \"https://www.banxico.org.mx/SieAPIRest/service/v1/\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "El FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 14 de marzo de 2025 era de 19.8693 MXN por USD."
+      }
+    ]
+  },
+  {
+    "question_id": "fix-2024-06-03",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "El FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 3 de junio de 2024 era de 17.6338 MXN por USD.",
+    "parsed": 17.6338,
+    "outcome": "correct",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue el tipo de cambio FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 3 de junio de 2024?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_lby987ez",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_fix_rate",
+              "arguments": "{\"date\":\"2024-06-03\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_lby987ez",
+        "content": "{\"indicator\": \"fix\", \"description\": \"FIX exchange rate determined by Banco de M\\u00e9xico, used to settle USD obligations in Mexico.\", \"unit\": \"MXN per USD\", \"date\": \"2024-06-03\", \"value\": 17.6338, \"source\": {\"name\": \"Banco de M\\u00e9xico, SIE series SF43718\", \"url\": \"https://www.banxico.org.mx/SieAPIRest/service/v1/\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "El FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 3 de junio de 2024 era de 17.6338 MXN por USD."
+      }
+    ]
+  },
+  {
+    "question_id": "fix-2026-01-15",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "El FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 15 de enero de 2026 era de 17.6897 MXN por USD.",
+    "parsed": 17.6897,
+    "outcome": "correct",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue el tipo de cambio FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 15 de enero de 2026?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_hkrtqfwp",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_fix_rate",
+              "arguments": "{\"date\":\"2026-01-15\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_hkrtqfwp",
+        "content": "{\"indicator\": \"fix\", \"description\": \"FIX exchange rate determined by Banco de M\\u00e9xico, used to settle USD obligations in Mexico.\", \"unit\": \"MXN per USD\", \"date\": \"2026-01-15\", \"value\": 17.6897, \"source\": {\"name\": \"Banco de M\\u00e9xico, SIE series SF43718\", \"url\": \"https://www.banxico.org.mx/SieAPIRest/service/v1/\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "El FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 15 de enero de 2026 era de 17.6897 MXN por USD."
+      }
+    ]
+  },
+  {
+    "question_id": "target-2025-08-15",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "La tasa objetivo de pol\u00edtica monetaria de Banco de M\u00e9xico el 15 de agosto de 2025 era de 7.75 por ciento anual.",
+    "parsed": 7.75,
+    "outcome": "correct",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l era la tasa objetivo de pol\u00edtica monetaria de Banco de M\u00e9xico, en porcentaje anual, el 15 de agosto de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_9os0ak0s",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_interest_rate",
+              "arguments": "{\"date\":\"2025-08-15\",\"rate\":\"target\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_9os0ak0s",
+        "content": "{\"indicator\": \"target\", \"description\": \"Banco de M\\u00e9xico monetary policy target rate.\", \"unit\": \"percent per year\", \"date\": \"2025-08-15\", \"value\": 7.75, \"source\": {\"name\": \"Banco de M\\u00e9xico, SIE series SF61745\", \"url\": \"https://www.banxico.org.mx/SieAPIRest/service/v1/\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "La tasa objetivo de pol\u00edtica monetaria de Banco de M\u00e9xico el 15 de agosto de 2025 era de 7.75 por ciento anual."
+      }
+    ]
+  },
+  {
+    "question_id": "tiie28-2025-12-19",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "La TIIE a 28 d\u00edas, en porcentaje anual, el 19 de diciembre de 2025 fue de 7.5299%.",
+    "parsed": 7.5299,
+    "outcome": "correct",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la TIIE a 28 d\u00edas, en porcentaje anual, el 19 de diciembre de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_8pd3l1lh",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_interest_rate",
+              "arguments": "{\"date\":\"2025-12-19\",\"rate\":\"tiie_28\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_8pd3l1lh",
+        "content": "{\"indicator\": \"tiie_28\", \"description\": \"28-day TIIE interbank equilibrium rate.\", \"unit\": \"percent per year\", \"date\": \"2025-12-19\", \"value\": 7.5299, \"source\": {\"name\": \"Banco de M\\u00e9xico, SIE series SF43783\", \"url\": \"https://www.banxico.org.mx/SieAPIRest/service/v1/\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "La TIIE a 28 d\u00edas, en porcentaje anual, el 19 de diciembre de 2025 fue de 7.5299%."
+      }
+    ]
+  },
+  {
+    "question_id": "cetes28-2025-06-26",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "La tasa de rendimiento de los CETES a 28 d\u00edas, en porcentaje anual, en la subasta primaria del 26 de junio de 2025 fue 8.0%.",
+    "parsed": 8.0,
+    "outcome": "correct",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la tasa de rendimiento de los CETES a 28 d\u00edas, en porcentaje anual, en la subasta primaria del 26 de junio de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_vfdbnbap",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_interest_rate",
+              "arguments": "{\"rate\":\"cetes_28\",\"date\":\"2025-06-26\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_vfdbnbap",
+        "content": "{\"indicator\": \"cetes_28\", \"description\": \"28-day CETES yield from the weekly primary auction.\", \"unit\": \"percent per year\", \"date\": \"2025-06-26\", \"value\": 8.0, \"source\": {\"name\": \"Banco de M\\u00e9xico, SIE series SF43936\", \"url\": \"https://www.banxico.org.mx/SieAPIRest/service/v1/\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "La tasa de rendimiento de los CETES a 28 d\u00edas, en porcentaje anual, en la subasta primaria del 26 de junio de 2025 fue 8.0%."
+      }
+    ]
+  },
+  {
+    "question_id": "inflation-annual-2025-06",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "La inflaci\u00f3n anual de M\u00e9xico (INPC) en junio de 2025 fue de 4.32 por ciento.",
+    "parsed": 4.32,
+    "outcome": "correct",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la inflaci\u00f3n anual de M\u00e9xico (INPC), en porcentaje, en junio de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_2wmewis3",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_inflation",
+              "arguments": "{\"year\":2025,\"month\":6}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_2wmewis3",
+        "content": "{\"period\": \"2025-06\", \"inpc\": 140.405, \"monthly_inflation_percent\": 0.28, \"annual_inflation_percent\": 4.32, \"year_to_date_inflation_percent\": 1.78, \"source\": {\"name\": \"INEGI, \\u00cdndice Nacional de Precios al Consumidor (INPC), indicator 910392\", \"url\": \"https://www.inegi.org.mx/temas/inpc/\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "La inflaci\u00f3n anual de M\u00e9xico (INPC) en junio de 2025 fue de 4.32 por ciento."
+      }
+    ]
+  },
+  {
+    "question_id": "inflation-monthly-2025-01",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "La inflaci\u00f3n mensual de M\u00e9xico (INPC) en enero de 2025 fue de 2.90 por ciento.",
+    "parsed": 2.9,
+    "outcome": "wrong",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la inflaci\u00f3n mensual de M\u00e9xico (INPC), en porcentaje, en enero de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_auxqlm9h",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_inflation",
+              "arguments": "{\"year\":2025,\"month\":1}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_auxqlm9h",
+        "content": "{\"period\": \"2025-01\", \"inpc\": 138.343, \"monthly_inflation_percent\": 0.29, \"annual_inflation_percent\": 3.59, \"year_to_date_inflation_percent\": 0.29, \"source\": {\"name\": \"INEGI, \\u00cdndice Nacional de Precios al Consumidor (INPC), indicator 910392\", \"url\": \"https://www.inegi.org.mx/temas/inpc/\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "La inflaci\u00f3n mensual de M\u00e9xico (INPC) en enero de 2025 fue de 2.90 por ciento."
+      }
+    ]
+  },
+  {
+    "question_id": "inflation-annual-2024-12",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "La inflaci\u00f3n anual de M\u00e9xico (INPC) en diciembre de 2024 fue de 4.21 por ciento.",
+    "parsed": 4.21,
+    "outcome": "correct",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la inflaci\u00f3n anual de M\u00e9xico (INPC), en porcentaje, en diciembre de 2024?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_7ompo3gx",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_inflation",
+              "arguments": "{\"year\":2024,\"month\":12}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_7ompo3gx",
+        "content": "{\"period\": \"2024-12\", \"inpc\": 137.949, \"monthly_inflation_percent\": 0.38, \"annual_inflation_percent\": 4.21, \"year_to_date_inflation_percent\": 4.21, \"source\": {\"name\": \"INEGI, \\u00cdndice Nacional de Precios al Consumidor (INPC), indicator 910392\", \"url\": \"https://www.inegi.org.mx/temas/inpc/\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "La inflaci\u00f3n anual de M\u00e9xico (INPC) en diciembre de 2024 fue de 4.21 por ciento."
+      }
+    ]
+  },
+  {
+    "question_id": "inpc-2025-06",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "El \u00edndice INPC general (base segunda quincena de julio de 2018 = 100) en junio de 2025 fue de 140.405.",
+    "parsed": 140.405,
+    "outcome": "correct",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue el valor del \u00edndice INPC general (base segunda quincena de julio de 2018 = 100) en junio de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_axk5r24w",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_inflation",
+              "arguments": "{\"month\":6,\"year\":2025}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_axk5r24w",
+        "content": "{\"period\": \"2025-06\", \"inpc\": 140.405, \"monthly_inflation_percent\": 0.28, \"annual_inflation_percent\": 4.32, \"year_to_date_inflation_percent\": 1.78, \"source\": {\"name\": \"INEGI, \\u00cdndice Nacional de Precios al Consumidor (INPC), indicator 910392\", \"url\": \"https://www.inegi.org.mx/temas/inpc/\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "El \u00edndice INPC general (base segunda quincena de julio de 2018 = 100) en junio de 2025 fue de 140.405."
+      }
+    ]
+  },
+  {
+    "question_id": "uma-2025-daily",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "El valor diario de la UMA (Unidad de Medida y Actualizaci\u00f3n) vigente en 2025 es de 113.14 pesos.",
+    "parsed": 113.14,
+    "outcome": "correct",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l es el valor diario de la UMA (Unidad de Medida y Actualizaci\u00f3n) vigente en 2025, en pesos?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_3iyw92pi",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_uma",
+              "arguments": "{\"year\":2025}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_3iyw92pi",
+        "content": "{\"year\": 2025, \"daily\": 113.14, \"monthly\": 3439.46, \"annual\": 41273.52, \"valid_from\": \"2025-02-01\", \"valid_until\": \"2026-01-31\", \"source\": {\"name\": \"INEGI, Unidad de Medida y Actualizaci\\u00f3n (UMA)\", \"url\": \"https://www.inegi.org.mx/temas/uma/\", \"verified_on\": \"2026-10-02\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "El valor diario de la UMA (Unidad de Medida y Actualizaci\u00f3n) vigente en 2025 es de 113.14 pesos."
+      }
+    ]
+  },
+  {
+    "question_id": "uma-2024-monthly",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "El valor mensual de la UMA vigente en 2024 es de 108.57 pesos.",
+    "parsed": 108.57,
+    "outcome": "wrong",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l es el valor mensual de la UMA vigente en 2024, en pesos?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_pa0et43p",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_uma",
+              "arguments": "{\"year\":2024}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_pa0et43p",
+        "content": "{\"year\": 2024, \"daily\": 108.57, \"monthly\": 3300.53, \"annual\": 39606.36, \"valid_from\": \"2024-02-01\", \"valid_until\": \"2025-01-31\", \"source\": {\"name\": \"INEGI, Unidad de Medida y Actualizaci\\u00f3n (UMA)\", \"url\": \"https://www.inegi.org.mx/temas/uma/\", \"verified_on\": \"2026-10-02\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "El valor mensual de la UMA vigente en 2024 es de 108.57 pesos."
+      }
+    ]
+  },
+  {
+    "question_id": "uma-2026-annual",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "RESPUESTA: 42794.64",
+    "parsed": 42794.64,
+    "outcome": "correct",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l es el valor anual de la UMA vigente en 2026, en pesos?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_jm5o1kys",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_uma",
+              "arguments": "{\"year\":2026}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_jm5o1kys",
+        "content": "{\"year\": 2026, \"daily\": 117.31, \"monthly\": 3566.22, \"annual\": 42794.64, \"valid_from\": \"2026-02-01\", \"valid_until\": null, \"source\": {\"name\": \"INEGI, Unidad de Medida y Actualizaci\\u00f3n (UMA)\", \"url\": \"https://www.inegi.org.mx/temas/uma/\", \"verified_on\": \"2026-10-02\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 42794.64"
+      }
+    ]
+  },
+  {
+    "question_id": "uma-2023-daily",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "El valor diario de la UMA vigente en 2023 es 103.74 pesos.",
+    "parsed": 103.74,
+    "outcome": "correct",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l es el valor diario de la UMA vigente en 2023, en pesos?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_46scepfw",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_uma",
+              "arguments": "{\"year\":2023}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_46scepfw",
+        "content": "{\"year\": 2023, \"daily\": 103.74, \"monthly\": 3153.7, \"annual\": 37844.4, \"valid_from\": \"2023-02-01\", \"valid_until\": \"2024-01-31\", \"source\": {\"name\": \"INEGI, Unidad de Medida y Actualizaci\\u00f3n (UMA)\", \"url\": \"https://www.inegi.org.mx/temas/uma/\", \"verified_on\": \"2026-10-02\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "El valor diario de la UMA vigente en 2023 es 103.74 pesos."
+      }
+    ]
+  },
+  {
+    "question_id": "isr-2025-monthly-fee",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "La cuota fija para un ingreso mensual de $20,000.00, seg\u00fan la tabla mensual del ISR de 2025 (art\u00edculo 96 de la LISR), es de $1856.84.",
+    "parsed": 1856.84,
+    "outcome": "wrong",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "Seg\u00fan la tabla mensual del ISR de personas f\u00edsicas de 2025 (art\u00edculo 96 de la LISR), \u00bfcu\u00e1l es la cuota fija, en pesos, para un ingreso mensual de $20,000.00?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_7npkpa8w",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_isr_table",
+              "arguments": "{\"year\":null,\"income\":20000,\"period\":\"monthly\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_7npkpa8w",
+        "content": "{\"year\": 2026, \"period\": \"monthly\", \"legal_basis\": \"Ley del ISR, art\\u00edculo 96 (pagos provisionales mensuales)\", \"brackets\": [{\"lower_limit\": 0.01, \"upper_limit\": 844.59, \"fixed_fee\": 0.0, \"rate_percent\": 1.92}, {\"lower_limit\": 844.6, \"upper_limit\": 7168.51, \"fixed_fee\": 16.22, \"rate_percent\": 6.4}, {\"lower_limit\": 7168.52, \"upper_limit\": 12598.02, \"fixed_fee\": 420.95, \"rate_percent\": 10.88}, {\"lower_limit\": 12598.03, \"upper_limit\": 14644.64, \"fixed_fee\": 1011.68, \"rate_percent\": 16.0}, {\"lower_limit\": 14644.65, \"upper_limit\": 17533.64, \"fixed_fee\": 1339.14, \"rate_percent\": 17.92}, {\"lower_limit\": 17533.65, \"upper_limit\": 35362.83, \"fixed_fee\": 1856.84, \"rate_percent\": 21.36}, {\"lower_limit\": 35362.84, \"upper_limit\": 55736.68, \"fixed_fee\": 5665.16, \"rate_percent\": 23.52}, {\"lower_limit\": 55736.69, \"upper_limit\": 106410.5, \"fixed_fee\": 10457.09, \"rate_percent\": 30.0}, {\"lower_limit\": 106410.51, \"upper_limit\": 141880.66, \"fixed_fee\": 25659.23, \"rate_percent\": 32.0}, {\"lower_limit\": 141880.67, \"upper_limit\": 425641.99, \"fixed_fee\": 37009.69, \"rate_percent\": 34.0}, {\"lower_limit\": 425642.0, \"upper_limit\": null, \"fixed_fee\": 133488.54, \"rate_percent\": 35.0}], \"source\": {\"name\": \"SAT, Anexo 8 de la Resoluci\\u00f3n Miscel\\u00e1nea Fiscal para 2026 (DOF 28/12/2025)\", \"url\": \"https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-8-RMF-2026_DOF-28122025.pdf\", \"verified_on\": \"2026-10-03\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "La cuota fija para un ingreso mensual de $20,000.00, seg\u00fan la tabla mensual del ISR de 2025 (art\u00edculo 96 de la LISR), es de $1856.84."
+      }
+    ]
+  },
+  {
+    "question_id": "isr-2025-monthly-rate",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "El porcentaje aplicable sobre el excedente del l\u00edmite inferior para un ingreso mensual de $60,000.00 es 16.0%.",
+    "parsed": 16.0,
+    "outcome": "wrong",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "Seg\u00fan la tabla mensual del ISR de personas f\u00edsicas de 2025 (art\u00edculo 96 de la LISR), \u00bfqu\u00e9 porcentaje se aplica sobre el excedente del l\u00edmite inferior para un ingreso mensual de $60,000.00?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_83b8741z",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_isr_table",
+              "arguments": "{\"year\":null,\"income\":60000,\"period\":\"monthly\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_83b8741z",
+        "content": "{\"year\": 2026, \"period\": \"monthly\", \"legal_basis\": \"Ley del ISR, art\\u00edculo 96 (pagos provisionales mensuales)\", \"brackets\": [{\"lower_limit\": 0.01, \"upper_limit\": 844.59, \"fixed_fee\": 0.0, \"rate_percent\": 1.92}, {\"lower_limit\": 844.6, \"upper_limit\": 7168.51, \"fixed_fee\": 16.22, \"rate_percent\": 6.4}, {\"lower_limit\": 7168.52, \"upper_limit\": 12598.02, \"fixed_fee\": 420.95, \"rate_percent\": 10.88}, {\"lower_limit\": 12598.03, \"upper_limit\": 14644.64, \"fixed_fee\": 1011.68, \"rate_percent\": 16.0}, {\"lower_limit\": 14644.65, \"upper_limit\": 17533.64, \"fixed_fee\": 1339.14, \"rate_percent\": 17.92}, {\"lower_limit\": 17533.65, \"upper_limit\": 35362.83, \"fixed_fee\": 1856.84, \"rate_percent\": 21.36}, {\"lower_limit\": 35362.84, \"upper_limit\": 55736.68, \"fixed_fee\": 5665.16, \"rate_percent\": 23.52}, {\"lower_limit\": 55736.69, \"upper_limit\": 106410.5, \"fixed_fee\": 10457.09, \"rate_percent\": 30.0}, {\"lower_limit\": 106410.51, \"upper_limit\": 141880.66, \"fixed_fee\": 25659.23, \"rate_percent\": 32.0}, {\"lower_limit\": 141880.67, \"upper_limit\": 425641.99, \"fixed_fee\": 37009.69, \"rate_percent\": 34.0}, {\"lower_limit\": 425642.0, \"upper_limit\": null, \"fixed_fee\": 133488.54, \"rate_percent\": 35.0}], \"source\": {\"name\": \"SAT, Anexo 8 de la Resoluci\\u00f3n Miscel\\u00e1nea Fiscal para 2026 (DOF 28/12/2025)\", \"url\": \"https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-8-RMF-2026_DOF-28122025.pdf\", \"verified_on\": \"2026-10-03\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "El porcentaje aplicable sobre el excedente del l\u00edmite inferior para un ingreso mensual de $60,000.00 es 16.0%."
+      }
+    ]
+  },
+  {
+    "question_id": "isr-2026-annual-fee",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "La cuota fija para un ingreso anual gravable de $500,000.00, seg\u00fan la tabla anual del ISR de 2026 (art\u00edculo 152 de la LISR), es de $160,186.24.",
+    "parsed": 160186.24,
+    "outcome": "wrong",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "Seg\u00fan la tabla anual del ISR de personas f\u00edsicas de 2026 (art\u00edculo 152 de la LISR), \u00bfcu\u00e1l es la cuota fija, en pesos, para un ingreso anual gravable de $500,000.00?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_vvdmpx79",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_isr_table",
+              "arguments": "{\"period\":\"annual\",\"year\":2026}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_vvdmpx79",
+        "content": "{\"year\": 2026, \"period\": \"annual\", \"legal_basis\": \"Ley del ISR, art\\u00edculo 152 (c\\u00e1lculo del impuesto anual)\", \"brackets\": [{\"lower_limit\": 0.01, \"upper_limit\": 10135.11, \"fixed_fee\": 0.0, \"rate_percent\": 1.92}, {\"lower_limit\": 10135.12, \"upper_limit\": 86022.11, \"fixed_fee\": 194.59, \"rate_percent\": 6.4}, {\"lower_limit\": 86022.12, \"upper_limit\": 151176.19, \"fixed_fee\": 5051.37, \"rate_percent\": 10.88}, {\"lower_limit\": 151176.2, \"upper_limit\": 175735.66, \"fixed_fee\": 12140.13, \"rate_percent\": 16.0}, {\"lower_limit\": 175735.67, \"upper_limit\": 210403.69, \"fixed_fee\": 16069.64, \"rate_percent\": 17.92}, {\"lower_limit\": 210403.7, \"upper_limit\": 424353.97, \"fixed_fee\": 22282.14, \"rate_percent\": 21.36}, {\"lower_limit\": 424353.98, \"upper_limit\": 668840.14, \"fixed_fee\": 67981.92, \"rate_percent\": 23.52}, {\"lower_limit\": 668840.15, \"upper_limit\": 1276925.98, \"fixed_fee\": 125485.07, \"rate_percent\": 30.0}, {\"lower_limit\": 1276925.99, \"upper_limit\": 1702567.97, \"fixed_fee\": 307910.81, \"rate_percent\": 32.0}, {\"lower_limit\": 1702567.98, \"upper_limit\": 5107703.92, \"fixed_fee\": 444116.23, \"rate_percent\": 34.0}, {\"lower_limit\": 5107703.93, \"upper_limit\": null, \"fixed_fee\": 1601862.46, \"rate_percent\": 35.0}], \"source\": {\"name\": \"SAT, Anexo 8 de la Resoluci\\u00f3n Miscel\\u00e1nea Fiscal para 2026 (DOF 28/12/2025)\", \"url\": \"https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-8-RMF-2026_DOF-28122025.pdf\", \"verified_on\": \"2026-10-03\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "La cuota fija para un ingreso anual gravable de $500,000.00, seg\u00fan la tabla anual del ISR de 2026 (art\u00edculo 152 de la LISR), es de $160,186.24."
+      }
+    ]
+  },
+  {
+    "question_id": "isr-2024-monthly-lower",
+    "model": "qwen2.5:1.5b",
+    "mode": "tools",
+    "reply": "El l\u00edmite inferior del rengl\u00f3n cuya tasa sobre el excedente es 23.52% en la tabla mensual del ISR de 2024 (art\u00edculo 96 de la LISR) es 0.01 peso.",
+    "parsed": 0.01,
+    "outcome": "wrong",
+    "tool_calls": 1,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. No redondees: da todos los decimales del dato. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "En la tabla mensual del ISR de personas f\u00edsicas de 2024 (art\u00edculo 96 de la LISR), \u00bfcu\u00e1l es el l\u00edmite inferior, en pesos, del rengl\u00f3n cuya tasa sobre el excedente es 23.52%?"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_9ay3fv1r",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "get_isr_table",
+              "arguments": "{\"period\":\"monthly\",\"year\":null}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_9ay3fv1r",
+        "content": "{\"year\": 2026, \"period\": \"monthly\", \"legal_basis\": \"Ley del ISR, art\\u00edculo 96 (pagos provisionales mensuales)\", \"brackets\": [{\"lower_limit\": 0.01, \"upper_limit\": 844.59, \"fixed_fee\": 0.0, \"rate_percent\": 1.92}, {\"lower_limit\": 844.6, \"upper_limit\": 7168.51, \"fixed_fee\": 16.22, \"rate_percent\": 6.4}, {\"lower_limit\": 7168.52, \"upper_limit\": 12598.02, \"fixed_fee\": 420.95, \"rate_percent\": 10.88}, {\"lower_limit\": 12598.03, \"upper_limit\": 14644.64, \"fixed_fee\": 1011.68, \"rate_percent\": 16.0}, {\"lower_limit\": 14644.65, \"upper_limit\": 17533.64, \"fixed_fee\": 1339.14, \"rate_percent\": 17.92}, {\"lower_limit\": 17533.65, \"upper_limit\": 35362.83, \"fixed_fee\": 1856.84, \"rate_percent\": 21.36}, {\"lower_limit\": 35362.84, \"upper_limit\": 55736.68, \"fixed_fee\": 5665.16, \"rate_percent\": 23.52}, {\"lower_limit\": 55736.69, \"upper_limit\": 106410.5, \"fixed_fee\": 10457.09, \"rate_percent\": 30.0}, {\"lower_limit\": 106410.51, \"upper_limit\": 141880.66, \"fixed_fee\": 25659.23, \"rate_percent\": 32.0}, {\"lower_limit\": 141880.67, \"upper_limit\": 425641.99, \"fixed_fee\": 37009.69, \"rate_percent\": 34.0}, {\"lower_limit\": 425642.0, \"upper_limit\": null, \"fixed_fee\": 133488.54, \"rate_percent\": 35.0}], \"source\": {\"name\": \"SAT, Anexo 8 de la Resoluci\\u00f3n Miscel\\u00e1nea Fiscal para 2026 (DOF 28/12/2025)\", \"url\": \"https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-8-RMF-2026_DOF-28122025.pdf\", \"verified_on\": \"2026-10-03\"}}"
+      },
+      {
+        "role": "assistant",
+        "content": "El l\u00edmite inferior del rengl\u00f3n cuya tasa sobre el excedente es 23.52% en la tabla mensual del ISR de 2024 (art\u00edculo 96 de la LISR) es 0.01 peso."
+      }
+    ]
+  }
+]

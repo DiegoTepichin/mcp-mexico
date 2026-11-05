@@ -1,0 +1,416 @@
+[
+  {
+    "question_id": "fix-2025-03-14",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "Como modelo de lenguaje, no tengo acceso a informaci\u00f3n en tiempo real, incluyendo datos de bancos o instituciones financieras. La informaci\u00f3n sobre el tipo de cambio FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico es un dato que cambia constantemente. \n\nPara obtener la informaci\u00f3n m\u00e1s precisa y actualizada, te recomiendo consultar directamente con:\n\n*   **Banco de M\u00e9xico:** Su sitio web oficial ([https://www.banxico.org.mx/](https://www.banxico.org.mx/)) es la fuente oficial.\n*   **Sitios web de noticias financieras:** Busca en sitios web de noticias financieras reconocidos en M\u00e9xico.\n\nRESPUESTA: 10.00",
+    "parsed": 10.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue el tipo de cambio FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 14 de marzo de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "Como modelo de lenguaje, no tengo acceso a informaci\u00f3n en tiempo real, incluyendo datos de bancos o instituciones financieras. La informaci\u00f3n sobre el tipo de cambio FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico es un dato que cambia constantemente. \n\nPara obtener la informaci\u00f3n m\u00e1s precisa y actualizada, te recomiendo consultar directamente con:\n\n*   **Banco de M\u00e9xico:** Su sitio web oficial ([https://www.banxico.org.mx/](https://www.banxico.org.mx/)) es la fuente oficial.\n*   **Sitios web de noticias financieras:** Busca en sitios web de noticias financieras reconocidos en M\u00e9xico.\n\nRESPUESTA: 10.00"
+      }
+    ]
+  },
+  {
+    "question_id": "fix-2024-06-03",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 16.83",
+    "parsed": 16.83,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue el tipo de cambio FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 3 de junio de 2024?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 16.83"
+      }
+    ]
+  },
+  {
+    "question_id": "fix-2026-01-15",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 14.83",
+    "parsed": 14.83,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue el tipo de cambio FIX (pesos mexicanos por d\u00f3lar) publicado por Banco de M\u00e9xico el 15 de enero de 2026?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 14.83"
+      }
+    ]
+  },
+  {
+    "question_id": "target-2025-08-15",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "La tasa objetivo de pol\u00edtica monetaria de Banco de M\u00e9xico, en porcentaje anual, el 15 de agosto de 2025, era de **0.5%**.\n\nRESPUESTA: 0.5%",
+    "parsed": 0.5,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l era la tasa objetivo de pol\u00edtica monetaria de Banco de M\u00e9xico, en porcentaje anual, el 15 de agosto de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "La tasa objetivo de pol\u00edtica monetaria de Banco de M\u00e9xico, en porcentaje anual, el 15 de agosto de 2025, era de **0.5%**.\n\nRESPUESTA: 0.5%"
+      }
+    ]
+  },
+  {
+    "question_id": "tiie28-2025-12-19",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "RESPUESTA: 0.75",
+    "parsed": 0.75,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la TIIE a 28 d\u00edas, en porcentaje anual, el 19 de diciembre de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "RESPUESTA: 0.75"
+      }
+    ]
+  },
+  {
+    "question_id": "cetes28-2025-06-26",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "La tasa de rendimiento de los CETES a 28 d\u00edas, en porcentaje anual, en la subasta primaria del 26 de junio de 2025, se estima en torno a **68%**.\n\nRESPUESTA: 68%",
+    "parsed": 68.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la tasa de rendimiento de los CETES a 28 d\u00edas, en porcentaje anual, en la subasta primaria del 26 de junio de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "La tasa de rendimiento de los CETES a 28 d\u00edas, en porcentaje anual, en la subasta primaria del 26 de junio de 2025, se estima en torno a **68%**.\n\nRESPUESTA: 68%"
+      }
+    ]
+  },
+  {
+    "question_id": "inflation-annual-2025-06",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "La inflaci\u00f3n anual de M\u00e9xico (INPC) en junio de 2025, seg\u00fan las proyecciones m\u00e1s recientes, se estima en torno a **3.5%**.\n\nRESPUESTA: 3.5%",
+    "parsed": 3.5,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la inflaci\u00f3n anual de M\u00e9xico (INPC), en porcentaje, en junio de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "La inflaci\u00f3n anual de M\u00e9xico (INPC) en junio de 2025, seg\u00fan las proyecciones m\u00e1s recientes, se estima en torno a **3.5%**.\n\nRESPUESTA: 3.5%"
+      }
+    ]
+  },
+  {
+    "question_id": "inflation-monthly-2025-01",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "La inflaci\u00f3n mensual de M\u00e9xico (INPC) en enero de 2025 fue de **0.43%**.\n\nRESPUESTA: 0.43",
+    "parsed": 0.43,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la inflaci\u00f3n mensual de M\u00e9xico (INPC), en porcentaje, en enero de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "La inflaci\u00f3n mensual de M\u00e9xico (INPC) en enero de 2025 fue de **0.43%**.\n\nRESPUESTA: 0.43"
+      }
+    ]
+  },
+  {
+    "question_id": "inflation-annual-2024-12",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "La inflaci\u00f3n anual de M\u00e9xico (INPC) en diciembre de 2024 fue de **1.33%**.\n\nRESPUESTA: 1.33",
+    "parsed": 1.33,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue la inflaci\u00f3n anual de M\u00e9xico (INPC), en porcentaje, en diciembre de 2024?"
+      },
+      {
+        "role": "assistant",
+        "content": "La inflaci\u00f3n anual de M\u00e9xico (INPC) en diciembre de 2024 fue de **1.33%**.\n\nRESPUESTA: 1.33"
+      }
+    ]
+  },
+  {
+    "question_id": "inpc-2025-06",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "La cifra m\u00e1s probable para el \u00cdndice INPC General (base segunda quincena de julio de 2018 = 100) en junio de 2025 es **98**.\n\nRESPUESTA: 98",
+    "parsed": 98.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l fue el valor del \u00edndice INPC general (base segunda quincena de julio de 2018 = 100) en junio de 2025?"
+      },
+      {
+        "role": "assistant",
+        "content": "La cifra m\u00e1s probable para el \u00cdndice INPC General (base segunda quincena de julio de 2018 = 100) en junio de 2025 es **98**.\n\nRESPUESTA: 98"
+      }
+    ]
+  },
+  {
+    "question_id": "uma-2025-daily",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "La UMA (Unidad de Medida y Actualizaci\u00f3n) es un concepto que ha evolucionado. Actualmente, la UMA se utiliza principalmente para la **medida de la inflaci\u00f3n en M\u00e9xico**.  \n\nEn 2025, la UMA se ha ajustado para reflejar la inflaci\u00f3n m\u00e1s reciente.  **La cifra estimada para la UMA en 2025 es de 110.000 pesos.**\n\nRESPUESTA: 110.000",
+    "parsed": 110.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l es el valor diario de la UMA (Unidad de Medida y Actualizaci\u00f3n) vigente en 2025, en pesos?"
+      },
+      {
+        "role": "assistant",
+        "content": "La UMA (Unidad de Medida y Actualizaci\u00f3n) es un concepto que ha evolucionado. Actualmente, la UMA se utiliza principalmente para la **medida de la inflaci\u00f3n en M\u00e9xico**.  \n\nEn 2025, la UMA se ha ajustado para reflejar la inflaci\u00f3n m\u00e1s reciente.  **La cifra estimada para la UMA en 2025 es de 110.000 pesos.**\n\nRESPUESTA: 110.000"
+      }
+    ]
+  },
+  {
+    "question_id": "uma-2024-monthly",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "La UMA vigente en 2024, en pesos, es de aproximadamente **132.50**.\n\nRESPUESTA: 132.50",
+    "parsed": 132.5,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l es el valor mensual de la UMA vigente en 2024, en pesos?"
+      },
+      {
+        "role": "assistant",
+        "content": "La UMA vigente en 2024, en pesos, es de aproximadamente **132.50**.\n\nRESPUESTA: 132.50"
+      }
+    ]
+  },
+  {
+    "question_id": "uma-2026-annual",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "La UMA vigente en 2026, seg\u00fan las estimaciones m\u00e1s recientes de la Comisi\u00f3n Federal de Instituciones Financieras (COAF), se estima en **18,500 pesos**.\n\nRESPUESTA: 18,500",
+    "parsed": 18500.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l es el valor anual de la UMA vigente en 2026, en pesos?"
+      },
+      {
+        "role": "assistant",
+        "content": "La UMA vigente en 2026, seg\u00fan las estimaciones m\u00e1s recientes de la Comisi\u00f3n Federal de Instituciones Financieras (COAF), se estima en **18,500 pesos**.\n\nRESPUESTA: 18,500"
+      }
+    ]
+  },
+  {
+    "question_id": "uma-2023-daily",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "La UMA vigente en 2023, en pesos, es de aproximadamente **13,800**.\n\nRESPUESTA: 13,800",
+    "parsed": 13800.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "\u00bfCu\u00e1l es el valor diario de la UMA vigente en 2023, en pesos?"
+      },
+      {
+        "role": "assistant",
+        "content": "La UMA vigente en 2023, en pesos, es de aproximadamente **13,800**.\n\nRESPUESTA: 13,800"
+      }
+    ]
+  },
+  {
+    "question_id": "isr-2025-monthly-fee",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "Seg\u00fan la tabla mensual del ISR de personas f\u00edsicas de 2025 (art\u00edculo 96 de la LISR), la cuota fija para un ingreso mensual de $20,000.00 es de **2,000.00 pesos**.\n\nRESPUESTA: 2000.00",
+    "parsed": 2000.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "Seg\u00fan la tabla mensual del ISR de personas f\u00edsicas de 2025 (art\u00edculo 96 de la LISR), \u00bfcu\u00e1l es la cuota fija, en pesos, para un ingreso mensual de $20,000.00?"
+      },
+      {
+        "role": "assistant",
+        "content": "Seg\u00fan la tabla mensual del ISR de personas f\u00edsicas de 2025 (art\u00edculo 96 de la LISR), la cuota fija para un ingreso mensual de $20,000.00 es de **2,000.00 pesos**.\n\nRESPUESTA: 2000.00"
+      }
+    ]
+  },
+  {
+    "question_id": "isr-2025-monthly-rate",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "Seg\u00fan la tabla mensual del ISR de personas f\u00edsicas de 2025 (art\u00edculo 96 de la LISR), se aplica un porcentaje de **15%** sobre el excedente del l\u00edmite inferior para un ingreso mensual de $60,000.00.\n\nRESPUESTA: 15",
+    "parsed": 15.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "Seg\u00fan la tabla mensual del ISR de personas f\u00edsicas de 2025 (art\u00edculo 96 de la LISR), \u00bfqu\u00e9 porcentaje se aplica sobre el excedente del l\u00edmite inferior para un ingreso mensual de $60,000.00?"
+      },
+      {
+        "role": "assistant",
+        "content": "Seg\u00fan la tabla mensual del ISR de personas f\u00edsicas de 2025 (art\u00edculo 96 de la LISR), se aplica un porcentaje de **15%** sobre el excedente del l\u00edmite inferior para un ingreso mensual de $60,000.00.\n\nRESPUESTA: 15"
+      }
+    ]
+  },
+  {
+    "question_id": "isr-2026-annual-fee",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "Seg\u00fan la tabla anual del ISR de personas f\u00edsicas de 2026 (art\u00edculo 152 de la LISR), la cuota fija para un ingreso anual gravable de $500,000.00 es de **500,000.00 pesos**.\n\nRESPUESTA: 500,000.00",
+    "parsed": 500000.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "Seg\u00fan la tabla anual del ISR de personas f\u00edsicas de 2026 (art\u00edculo 152 de la LISR), \u00bfcu\u00e1l es la cuota fija, en pesos, para un ingreso anual gravable de $500,000.00?"
+      },
+      {
+        "role": "assistant",
+        "content": "Seg\u00fan la tabla anual del ISR de personas f\u00edsicas de 2026 (art\u00edculo 152 de la LISR), la cuota fija para un ingreso anual gravable de $500,000.00 es de **500,000.00 pesos**.\n\nRESPUESTA: 500,000.00"
+      }
+    ]
+  },
+  {
+    "question_id": "isr-2024-monthly-lower",
+    "model": "gemma3:1b",
+    "mode": "plain",
+    "reply": "La tabla mensual del ISR de personas f\u00edsicas de 2024 (art\u00edculo 96 de la LISR) establece que el l\u00edmite inferior del rengl\u00f3n cuya tasa sobre el excedente es 23.52% es de **100,000 pesos**.\n\nRESPUESTA: 100,000",
+    "parsed": 100000.0,
+    "outcome": "wrong",
+    "tool_calls": 0,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde preguntas sobre datos oficiales de M\u00e9xico. Responde con tu mejor cifra, aunque no est\u00e9s seguro. Termina con una \u00faltima l\u00ednea 'RESPUESTA: <n\u00famero>' con una sola cifra, sin unidades."
+      },
+      {
+        "role": "user",
+        "content": "En la tabla mensual del ISR de personas f\u00edsicas de 2024 (art\u00edculo 96 de la LISR), \u00bfcu\u00e1l es el l\u00edmite inferior, en pesos, del rengl\u00f3n cuya tasa sobre el excedente es 23.52%?"
+      },
+      {
+        "role": "assistant",
+        "content": "La tabla mensual del ISR de personas f\u00edsicas de 2024 (art\u00edculo 96 de la LISR) establece que el l\u00edmite inferior del rengl\u00f3n cuya tasa sobre el excedente es 23.52% es de **100,000 pesos**.\n\nRESPUESTA: 100,000"
+      }
+    ]
+  }
+]

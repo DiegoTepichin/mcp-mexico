@@ -85,6 +85,10 @@ Ask your assistant:
 - "How much is 30 UMAs in pesos this year?"
 - "Using the 2026 monthly ISR table, how much tax is withheld on a 25,000 peso salary?"
 
+## Does it help?
+
+In a run of three small local models (1 to 3 billion parameters) on 18 questions about official figures, none answered a single one correctly from memory. With this server, llama3.2:3b answered 14 of 18 correctly and qwen2.5:1.5b 12 of 18; all four ISR questions failed for both, because they must pick the right row of the bracket table. One run, small models, exact figures: read the [method and limits](docs/truth-gap.md) before quoting it.
+
 ## Configuration
 
 | Variable | Required | Description |
