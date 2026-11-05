@@ -41,6 +41,15 @@ async def test_fix_rate_range(banxico: BanxicoClient) -> None:
     assert len(result.structured_content["observations"]) == 7
 
 
+async def test_fix_rate_range_reports_the_days_with_data(banxico: BanxicoClient) -> None:
+    result = await _call(
+        "get_fix_rate_range", {"start": "2026-09-17", "end": "2026-09-27"}, banxico
+    )
+
+    assert result.structured_content["start"] == "2026-09-17"
+    assert result.structured_content["end"] == "2026-09-25"
+
+
 async def test_fix_rate_range_without_business_days_is_an_error(banxico: BanxicoClient) -> None:
     result = await _call(
         "get_fix_rate_range", {"start": "2026-10-03", "end": "2026-10-04"}, banxico
@@ -127,6 +136,8 @@ async def test_weekly_cetes_series(banxico: BanxicoClient) -> None:
     )
 
     assert len(result.structured_content["observations"]) == 13
+    assert result.structured_content["start"] == "2026-07-02"
+    assert result.structured_content["end"] == "2026-09-24"
 
 
 async def test_unknown_rate_is_rejected(banxico: BanxicoClient) -> None:
