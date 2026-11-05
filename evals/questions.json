@@ -1,0 +1,254 @@
+[
+  {
+    "id": "fix-2025-03-14",
+    "topic": "fix",
+    "tool": "get_fix_rate",
+    "question": "¿Cuál fue el tipo de cambio FIX (pesos mexicanos por dólar) publicado por Banco de México el 14 de marzo de 2025?",
+    "answer": 19.8693,
+    "tolerance": 0.01,
+    "unit": "MXN por USD",
+    "source": {
+      "name": "Banco de México, SIE",
+      "url": "https://www.banxico.org.mx/SieAPIRest/service/v1/"
+    },
+    "verified_on": "2026-11-05"
+  },
+  {
+    "id": "fix-2024-06-03",
+    "topic": "fix",
+    "tool": "get_fix_rate",
+    "question": "¿Cuál fue el tipo de cambio FIX (pesos mexicanos por dólar) publicado por Banco de México el 3 de junio de 2024?",
+    "answer": 17.6338,
+    "tolerance": 0.01,
+    "unit": "MXN por USD",
+    "source": {
+      "name": "Banco de México, SIE",
+      "url": "https://www.banxico.org.mx/SieAPIRest/service/v1/"
+    },
+    "verified_on": "2026-11-05"
+  },
+  {
+    "id": "fix-2026-01-15",
+    "topic": "fix",
+    "tool": "get_fix_rate",
+    "question": "¿Cuál fue el tipo de cambio FIX (pesos mexicanos por dólar) publicado por Banco de México el 15 de enero de 2026?",
+    "answer": 17.6897,
+    "tolerance": 0.01,
+    "unit": "MXN por USD",
+    "source": {
+      "name": "Banco de México, SIE",
+      "url": "https://www.banxico.org.mx/SieAPIRest/service/v1/"
+    },
+    "verified_on": "2026-11-05"
+  },
+  {
+    "id": "target-2025-08-15",
+    "topic": "rates",
+    "tool": "get_interest_rate",
+    "question": "¿Cuál era la tasa objetivo de política monetaria de Banco de México, en porcentaje anual, el 15 de agosto de 2025?",
+    "answer": 7.75,
+    "tolerance": 0.01,
+    "unit": "% anual",
+    "source": {
+      "name": "Banco de México, SIE",
+      "url": "https://www.banxico.org.mx/SieAPIRest/service/v1/"
+    },
+    "verified_on": "2026-11-05"
+  },
+  {
+    "id": "tiie28-2025-12-19",
+    "topic": "rates",
+    "tool": "get_interest_rate",
+    "question": "¿Cuál fue la TIIE a 28 días, en porcentaje anual, el 19 de diciembre de 2025?",
+    "answer": 7.5299,
+    "tolerance": 0.01,
+    "unit": "% anual",
+    "source": {
+      "name": "Banco de México, SIE",
+      "url": "https://www.banxico.org.mx/SieAPIRest/service/v1/"
+    },
+    "verified_on": "2026-11-05"
+  },
+  {
+    "id": "cetes28-2025-06-26",
+    "topic": "rates",
+    "tool": "get_interest_rate",
+    "question": "¿Cuál fue la tasa de rendimiento de los CETES a 28 días, en porcentaje anual, en la subasta primaria del 26 de junio de 2025?",
+    "answer": 8.0,
+    "tolerance": 0.01,
+    "unit": "% anual",
+    "source": {
+      "name": "Banco de México, SIE",
+      "url": "https://www.banxico.org.mx/SieAPIRest/service/v1/"
+    },
+    "verified_on": "2026-11-05"
+  },
+  {
+    "id": "inflation-annual-2025-06",
+    "topic": "inflation",
+    "tool": "get_inflation",
+    "question": "¿Cuál fue la inflación anual de México (INPC), en porcentaje, en junio de 2025?",
+    "answer": 4.32,
+    "tolerance": 0.01,
+    "unit": "%",
+    "source": {
+      "name": "INEGI, Índice Nacional de Precios al Consumidor (INPC)",
+      "url": "https://www.inegi.org.mx/temas/inpc/"
+    },
+    "verified_on": "2026-11-05"
+  },
+  {
+    "id": "inflation-monthly-2025-01",
+    "topic": "inflation",
+    "tool": "get_inflation",
+    "question": "¿Cuál fue la inflación mensual de México (INPC), en porcentaje, en enero de 2025?",
+    "answer": 0.29,
+    "tolerance": 0.01,
+    "unit": "%",
+    "source": {
+      "name": "INEGI, Índice Nacional de Precios al Consumidor (INPC)",
+      "url": "https://www.inegi.org.mx/temas/inpc/"
+    },
+    "verified_on": "2026-11-05"
+  },
+  {
+    "id": "inflation-annual-2024-12",
+    "topic": "inflation",
+    "tool": "get_inflation",
+    "question": "¿Cuál fue la inflación anual de México (INPC), en porcentaje, en diciembre de 2024?",
+    "answer": 4.21,
+    "tolerance": 0.01,
+    "unit": "%",
+    "source": {
+      "name": "INEGI, Índice Nacional de Precios al Consumidor (INPC)",
+      "url": "https://www.inegi.org.mx/temas/inpc/"
+    },
+    "verified_on": "2026-11-05"
+  },
+  {
+    "id": "inpc-2025-06",
+    "topic": "inflation",
+    "tool": "get_inflation",
+    "question": "¿Cuál fue el valor del índice INPC general (base segunda quincena de julio de 2018 = 100) en junio de 2025?",
+    "answer": 140.405,
+    "tolerance": 0.01,
+    "unit": "puntos",
+    "source": {
+      "name": "INEGI, Índice Nacional de Precios al Consumidor (INPC)",
+      "url": "https://www.inegi.org.mx/temas/inpc/"
+    },
+    "verified_on": "2026-11-05"
+  },
+  {
+    "id": "uma-2025-daily",
+    "topic": "uma",
+    "tool": "get_uma",
+    "question": "¿Cuál es el valor diario de la UMA (Unidad de Medida y Actualización) vigente en 2025, en pesos?",
+    "answer": 113.14,
+    "tolerance": 0.005,
+    "unit": "MXN",
+    "source": {
+      "name": "INEGI, Unidad de Medida y Actualización (DOF)",
+      "url": "https://www.inegi.org.mx/temas/uma/"
+    },
+    "verified_on": "2026-10-03"
+  },
+  {
+    "id": "uma-2024-monthly",
+    "topic": "uma",
+    "tool": "get_uma",
+    "question": "¿Cuál es el valor mensual de la UMA vigente en 2024, en pesos?",
+    "answer": 3300.53,
+    "tolerance": 0.005,
+    "unit": "MXN",
+    "source": {
+      "name": "INEGI, Unidad de Medida y Actualización (DOF)",
+      "url": "https://www.inegi.org.mx/temas/uma/"
+    },
+    "verified_on": "2026-10-03"
+  },
+  {
+    "id": "uma-2026-annual",
+    "topic": "uma",
+    "tool": "get_uma",
+    "question": "¿Cuál es el valor anual de la UMA vigente en 2026, en pesos?",
+    "answer": 42794.64,
+    "tolerance": 0.005,
+    "unit": "MXN",
+    "source": {
+      "name": "INEGI, Unidad de Medida y Actualización (DOF)",
+      "url": "https://www.inegi.org.mx/temas/uma/"
+    },
+    "verified_on": "2026-10-03"
+  },
+  {
+    "id": "uma-2023-daily",
+    "topic": "uma",
+    "tool": "get_uma",
+    "question": "¿Cuál es el valor diario de la UMA vigente en 2023, en pesos?",
+    "answer": 103.74,
+    "tolerance": 0.005,
+    "unit": "MXN",
+    "source": {
+      "name": "INEGI, Unidad de Medida y Actualización (DOF)",
+      "url": "https://www.inegi.org.mx/temas/uma/"
+    },
+    "verified_on": "2026-10-03"
+  },
+  {
+    "id": "isr-2025-monthly-fee",
+    "topic": "isr",
+    "tool": "get_isr_table",
+    "question": "Según la tabla mensual del ISR de personas físicas de 2025 (artículo 96 de la LISR), ¿cuál es la cuota fija, en pesos, para un ingreso mensual de $20,000.00?",
+    "answer": 1640.18,
+    "tolerance": 0.005,
+    "unit": "MXN",
+    "source": {
+      "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2025",
+      "url": "https://www.sat.gob.mx/"
+    },
+    "verified_on": "2026-10-03"
+  },
+  {
+    "id": "isr-2025-monthly-rate",
+    "topic": "isr",
+    "tool": "get_isr_table",
+    "question": "Según la tabla mensual del ISR de personas físicas de 2025 (artículo 96 de la LISR), ¿qué porcentaje se aplica sobre el excedente del límite inferior para un ingreso mensual de $60,000.00?",
+    "answer": 30.0,
+    "tolerance": 0.005,
+    "unit": "%",
+    "source": {
+      "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2025",
+      "url": "https://www.sat.gob.mx/"
+    },
+    "verified_on": "2026-10-03"
+  },
+  {
+    "id": "isr-2026-annual-fee",
+    "topic": "isr",
+    "tool": "get_isr_table",
+    "question": "Según la tabla anual del ISR de personas físicas de 2026 (artículo 152 de la LISR), ¿cuál es la cuota fija, en pesos, para un ingreso anual gravable de $500,000.00?",
+    "answer": 67981.92,
+    "tolerance": 0.005,
+    "unit": "MXN",
+    "source": {
+      "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2026",
+      "url": "https://www.sat.gob.mx/"
+    },
+    "verified_on": "2026-10-03"
+  },
+  {
+    "id": "isr-2024-monthly-lower",
+    "topic": "isr",
+    "tool": "get_isr_table",
+    "question": "En la tabla mensual del ISR de personas físicas de 2024 (artículo 96 de la LISR), ¿cuál es el límite inferior, en pesos, del renglón cuya tasa sobre el excedente es 23.52%?",
+    "answer": 31236.5,
+    "tolerance": 0.005,
+    "unit": "MXN",
+    "source": {
+      "name": "SAT, Anexo 8 de la Resolución Miscelánea Fiscal para 2024",
+      "url": "https://www.sat.gob.mx/"
+    },
+    "verified_on": "2026-10-03"
+  }
+]
