@@ -1,10 +1,13 @@
 import json
+from pathlib import Path
 from typing import Any
 
+import anyio.to_thread
 import httpx
 import pytest
 from mcp import Client
 
+from evals.__main__ import main
 from evals.questions import Question, load_questions
 from evals.runner import (
     MAX_TURNS,
@@ -216,3 +219,21 @@ async def test_http_errors_are_raised() -> None:
 
     with pytest.raises(httpx.HTTPStatusError):
         await chat.complete("m", [{"role": "user", "content": "hi"}])
+
+
+async def test_the_command_line_runs_and_reports(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    model = ScriptedModel(say("RESPUESTA: 1"))
+    monkeypatch.setattr("evals.__main__.ChatClient", lambda base_url, api_key: model.chat(api_key))
+    results = tmp_path / "results"
+
+    code = await anyio.to_thread.run_sync(
+        main, ["run", "--model", "tiny/model:1b", "--mode", "plain", "--results", str(results)]
+    )
+
+    assert code == 0
+    assert "0/18 correct" in capsys.readouterr().out
+    assert (results / "tiny_model_1b.json").exists()
+    assert main(["report", "--results", str(results)]) == 0
+    assert "| tiny/model:1b | plain | 0/18 |" in capsys.readouterr().out
