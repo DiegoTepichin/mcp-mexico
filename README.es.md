@@ -83,6 +83,10 @@ Pregúntale a tu asistente:
 - "¿Cuánto son 30 UMAs en pesos este año?"
 - "Con la tabla mensual de ISR 2026, ¿cuánto se retiene a un sueldo de 25,000 pesos?"
 
+## ¿Sirve?
+
+En una corrida con tres modelos locales pequeños (de 1 a 3 mil millones de parámetros) y 18 preguntas sobre cifras oficiales, ninguno acertó una sola de memoria. Con este servidor, llama3.2:3b acertó 14 de 18 y qwen2.5:1.5b 12 de 18; las cuatro preguntas de ISR fallaron en ambos porque deben elegir el renglón correcto de la tabla. Una corrida, modelos pequeños, cifras exactas: lee el [método y los límites](docs/truth-gap.md) (en inglés) antes de citarlo.
+
 ## Configuración
 
 | Variable | Obligatoria | Descripción |

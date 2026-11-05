@@ -57,6 +57,10 @@ Key decisions:
 
 Banxico series IDs, confirmed against the live API on 2026-10-03: FIX `SF43718`, target rate `SF61745`, TIIE 28 `SF43783`, TIIE de Fondeo `SF331451`, CETES 28 `SF43936`. INEGI: INPC general index `910392` (monthly, 2nd fortnight of July 2018 = 100), confirmed with the INEGI catalog API on 2026-10-04; inflation is computed from the index and matches INEGI publications for 2026-08, 2024-12 and 2023-06. Nothing is hardcoded from memory without verification.
 
+## After v0.1: truth-gap evaluation
+
+`evals/` measures how often a model gives the right official figure from memory and with this server's tools: 18 questions with answers from the official sources, a runner for any OpenAI-compatible API (Ollama locally) and a report. It widens the v0.1 scope without changing the server; method, results and limits are in [`truth-gap.md`](truth-gap.md). Tools that compute (for example ISR for a given income), more topics and larger models stay as GitHub issues.
+
 ## Milestones
 
 Each milestone gets its own branch and PR, and merges only with green CI.
