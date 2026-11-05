@@ -50,15 +50,20 @@ def _row(model: str, mode: Mode, counts: Counter[Outcome], total: int) -> str:
 
 
 def _topic_table(results: Sequence[Result], topics: dict[str, str]) -> str:
-    names = sorted(set(topics.values()))
+    """Correct answers per topic for every model and mode that was run."""
+    columns = sorted({(r.model, r.mode) for r in results}, key=lambda c: (c[0], c[1].value))
     lines = [
-        "| Topic | " + " | ".join(mode.value for mode in Mode) + " |",
-        "|---|" + "---|" * len(Mode),
+        "| Topic | " + " | ".join(f"{model} {mode.value}" for model, mode in columns) + " |",
+        "|---|" + "---|" * len(columns),
     ]
-    for topic in names:
+    for topic in sorted(set(topics.values())):
         cells = []
-        for mode in Mode:
-            rows = [r for r in results if r.mode is mode and topics.get(r.question_id) == topic]
+        for model, mode in columns:
+            rows = [
+                r
+                for r in results
+                if (r.model, r.mode) == (model, mode) and topics.get(r.question_id) == topic
+            ]
             right = sum(1 for r in rows if r.outcome is Outcome.CORRECT)
             cells.append(f"{right}/{len(rows)}" if rows else "-")
         lines.append(f"| {topic} | " + " | ".join(cells) + " |")

@@ -11,19 +11,21 @@ from pydantic import BaseModel
 from evals.questions import Question
 
 MAX_TURNS = 6
-TIMEOUT_SECONDS = 300
+TIMEOUT_SECONDS = 180
 ANSWER_LINE = re.compile(r"RESPUESTA\s*:\s*(.+)", re.IGNORECASE)
 NUMBER = re.compile(r"-?\d[\d,]*(?:\.\d+)?")
 
 PLAIN_PROMPT = (
     "Eres un asistente que responde preguntas sobre datos oficiales de México. "
-    "Responde con tu mejor cifra, aunque no estés seguro. Termina con una última línea "
-    "'RESPUESTA: <número>' con una sola cifra, sin unidades."
+    "Responde con tu mejor cifra, aunque no estés seguro, y sin redondear: da todos los "
+    "decimales del dato. Termina con una última línea 'RESPUESTA: <número>' con una sola "
+    "cifra, sin unidades."
 )
 TOOLS_PROMPT = (
     "Eres un asistente que responde preguntas sobre datos oficiales de México. "
     "Usa las herramientas disponibles para obtener el dato oficial; no lo estimes. "
-    "Termina con una última línea 'RESPUESTA: <número>' con una sola cifra, sin unidades."
+    "No redondees: da todos los decimales del dato. Termina con una última línea "
+    "'RESPUESTA: <número>' con una sola cifra, sin unidades."
 )
 
 Message = dict[str, Any]
@@ -121,7 +123,10 @@ async def ask(
     mode: Mode,
     mcp: Client | None = None,
 ) -> Result:
-    """Ask one question; in `tools` mode the model may call the MCP server for up to `MAX_TURNS`."""
+    """Ask one question; in `tools` mode the model may call the MCP server for up to `MAX_TURNS`.
+
+    A request that times out or fails counts as no answer instead of ending the whole run.
+    """
     system = PLAIN_PROMPT if mode is Mode.PLAIN else TOOLS_PROMPT
     messages: list[Message] = [
         {"role": "system", "content": system},
@@ -130,14 +135,18 @@ async def ask(
     tools = openai_tools((await mcp.list_tools()).tools) if mode is Mode.TOOLS and mcp else None
     calls = 0
     reply: Message = {}
-    for _ in range(MAX_TURNS):
-        reply = await chat.complete(model, messages, tools)
+    try:
+        for _ in range(MAX_TURNS):
+            reply = await chat.complete(model, messages, tools)
+            messages.append(reply)
+            requested = reply.get("tool_calls") or []
+            if not requested or mcp is None:
+                break
+            calls += len(requested)
+            messages.extend([await _run_tool(mcp, call) for call in requested])
+    except httpx.HTTPError as error:
+        reply = {"role": "assistant", "content": f"[request failed: {type(error).__name__}]"}
         messages.append(reply)
-        requested = reply.get("tool_calls") or []
-        if not requested or mcp is None:
-            break
-        calls += len(requested)
-        messages.extend([await _run_tool(mcp, call) for call in requested])
     text = str(reply.get("content") or "")
     parsed = None if reply.get("tool_calls") else parse_number(text, question.question)
     return Result(

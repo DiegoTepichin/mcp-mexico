@@ -50,6 +50,7 @@ def test_summary_counts_failures_without_and_with_tools(results: list[Result]) -
 def test_summary_breaks_down_correct_answers_by_topic(results: list[Result]) -> None:
     table = summary_table(results, QUESTIONS)
 
+    assert "| Topic | small plain | small tools |" in table
     assert "| fix | 0/1 | 1/1 |" in table
     assert "| uma | 1/2 | 1/2 |" in table
     assert "| isr | - | - |" in table
@@ -62,3 +63,15 @@ def test_summary_lists_each_model_once_per_mode(results: list[Result]) -> None:
 
     assert table.count("| big |") == 1
     assert table.count("| small |") == 2
+
+
+def test_topics_are_counted_per_model_not_across_models(results: list[Result]) -> None:
+    other = [
+        result("fix-2025-03-14", "big", Mode.PLAIN, Outcome.CORRECT),
+        result("fix-2024-06-03", "big", Mode.PLAIN, Outcome.CORRECT),
+    ]
+
+    table = summary_table([*results, *other], QUESTIONS)
+
+    assert "| Topic | big plain | small plain | small tools |" in table
+    assert "| fix | 2/2 | 0/1 | 1/1 |" in table

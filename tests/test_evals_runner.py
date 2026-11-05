@@ -237,3 +237,26 @@ async def test_the_command_line_runs_and_reports(
     assert (results / "tiny_model_1b.json").exists()
     assert main(["report", "--results", str(results)]) == 0
     assert "| tiny/model:1b | plain | 0/18 |" in capsys.readouterr().out
+
+
+async def test_a_request_that_times_out_counts_as_no_answer() -> None:
+    def time_out(request: httpx.Request) -> httpx.Response:
+        raise httpx.ReadTimeout("too slow", request=request)
+
+    chat = ChatClient(BASE_URL, None, httpx.AsyncClient(transport=httpx.MockTransport(time_out)))
+
+    result = await ask(chat, "m", UMA, Mode.PLAIN)
+
+    assert result.outcome is Outcome.NO_ANSWER
+    assert result.reply == "[request failed: ReadTimeout]"
+
+
+async def test_both_modes_ask_for_unrounded_figures() -> None:
+    model = ScriptedModel(say("RESPUESTA: 1"))
+
+    async with Client(build_server()) as mcp:
+        await ask(model.chat(), "m", UMA, Mode.PLAIN)
+        await ask(model.chat(), "m", UMA, Mode.TOOLS, mcp)
+
+    for index in (0, 1):
+        assert "redonde" in model.body(index)["messages"][0]["content"]
