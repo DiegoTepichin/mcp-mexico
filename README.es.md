@@ -19,9 +19,9 @@ Los asistentes de IA inventan las cifras económicas de México o usan datos vie
 
 | Herramienta | Qué regresa | Fuente | Token |
 |---|---|---|---|
-| `get_fix_rate` | Tipo de cambio FIX USD/MXN, el más reciente o el de una fecha. En fines de semana y días festivos regresa el del día hábil anterior. | Banxico SIE | `BANXICO_TOKEN` |
+| `get_fix_rate` | Tipo de cambio FIX USD/MXN, el más reciente o el de una fecha. En fines de semana y días festivos regresa el del día hábil anterior. Rechaza fechas futuras. | Banxico SIE | `BANXICO_TOKEN` |
 | `get_fix_rate_range` | FIX diario entre dos fechas (máximo 366 días). | Banxico SIE | `BANXICO_TOKEN` |
-| `get_interest_rate` | Tasa objetivo de Banxico, TIIE a 28 días, TIIE de Fondeo o CETES a 28 días; la más reciente o la de una fecha. | Banxico SIE | `BANXICO_TOKEN` |
+| `get_interest_rate` | Tasa objetivo de Banxico, TIIE a 28 días, TIIE de Fondeo o CETES a 28 días; la más reciente o la de una fecha. Rechaza fechas futuras. | Banxico SIE | `BANXICO_TOKEN` |
 | `get_interest_rate_range` | Una de esas tasas entre dos fechas (máximo 366 días). | Banxico SIE | `BANXICO_TOKEN` |
 | `get_inflation` | INPC e inflación mensual, anual y acumulada en el año para un mes (por defecto, el último publicado). | INEGI | `INEGI_TOKEN` |
 | `get_inflation_range` | Lo mismo para cada mes de un rango (máximo 240 meses). | INEGI | `INEGI_TOKEN` |
