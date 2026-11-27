@@ -14,5 +14,9 @@ class MissingTokenError(McpMexicoError):
     """A required API token is not configured."""
 
 
+class MalformedTokenError(McpMexicoError):
+    """A configured API token cannot be one: usually a copy and paste mistake."""
+
+
 class UpstreamError(McpMexicoError):
     """An official API failed, rejected the request or could not be reached."""

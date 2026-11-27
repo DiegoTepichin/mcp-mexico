@@ -3,10 +3,11 @@ from typing import Any
 import httpx
 
 from mcp_mexico.cache import TtlCache
-from mcp_mexico.config import INEGI_TOKEN_VAR, read_token
-from mcp_mexico.errors import MissingTokenError, UpstreamError
+from mcp_mexico.config import INEGI_TOKEN_VAR, read_token, require_token
+from mcp_mexico.errors import UpstreamError
 from mcp_mexico.models import Source
 from mcp_mexico.sources.http import get_with_retry
+from mcp_mexico.sources.numbers import parse_finite
 
 BASE_URL = "https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml"
 TOKEN_URL = "https://www.inegi.org.mx/app/desarrolladores/generatoken/Usuarios/token_Verify"
@@ -18,6 +19,7 @@ INPC_SOURCE = Source(
 )
 CACHE_TTL_SECONDS = 6 * 60 * 60
 TIMEOUT_SECONDS = 20.0
+UNEXPECTED_FORMAT_MESSAGE = "INEGI API returned an unexpected response format."
 
 Month = tuple[int, int]
 _Payload = dict[str, Any]
@@ -45,14 +47,10 @@ class InegiClient:
         return series
 
     async def _get(self, path: str) -> _Payload:
-        if self._token is None:
-            raise MissingTokenError(
-                f"{INEGI_TOKEN_VAR} is not set. Get a free token at {TOKEN_URL} and add it "
-                "to the MCP server's environment."
-            )
+        token = require_token(self._token, INEGI_TOKEN_VAR, TOKEN_URL)
         try:
             response = await get_with_retry(
-                self._http, f"{BASE_URL}/{path}/{self._token}", params={"type": "json"}
+                self._http, f"{BASE_URL}/{path}/{token}", params={"type": "json"}
             )
         except httpx.HTTPError as error:
             # The token is part of the URL, so the exception text is not echoed back.
@@ -83,13 +81,16 @@ def _payload_or_raise(response: httpx.Response) -> _Payload:
 def _parse_monthly_series(payload: _Payload) -> dict[Month, float]:
     try:
         observations = payload["Series"][0]["OBSERVATIONS"]
-        return {
-            _parse_month(point["TIME_PERIOD"]): float(point["OBS_VALUE"])
+        series = {
+            _parse_month(point["TIME_PERIOD"]): parse_finite(point["OBS_VALUE"])
             for point in observations
             if point["OBS_VALUE"]
         }
     except (AttributeError, IndexError, KeyError, TypeError, ValueError) as error:
-        raise UpstreamError("INEGI API returned an unexpected response format.") from error
+        raise UpstreamError(UNEXPECTED_FORMAT_MESSAGE) from error
+    if not series or min(series.values()) <= 0:
+        raise UpstreamError(UNEXPECTED_FORMAT_MESSAGE)
+    return series
 
 
 def _parse_month(raw: str) -> Month:
