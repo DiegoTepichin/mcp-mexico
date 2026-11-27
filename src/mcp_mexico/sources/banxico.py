@@ -7,10 +7,11 @@ import httpx
 
 from mcp_mexico.cache import TtlCache
 from mcp_mexico.clock import today_mx
-from mcp_mexico.config import BANXICO_TOKEN_VAR, read_token
-from mcp_mexico.errors import DataNotAvailableError, MissingTokenError, UpstreamError
+from mcp_mexico.config import BANXICO_TOKEN_VAR, read_token, require_token
+from mcp_mexico.errors import DataNotAvailableError, UpstreamError
 from mcp_mexico.models import Observation, Source
 from mcp_mexico.sources.http import get_with_retry
+from mcp_mexico.sources.numbers import parse_finite
 
 BASE_URL = "https://www.banxico.org.mx/SieAPIRest/service/v1/series"
 TOKEN_URL = "https://www.banxico.org.mx/SieAPIRest/service/v1/token"
@@ -110,14 +111,10 @@ class BanxicoClient:
         return observations
 
     async def _get(self, path: str) -> _Payload:
-        if self._token is None:
-            raise MissingTokenError(
-                f"{BANXICO_TOKEN_VAR} is not set. Get a free token at {TOKEN_URL} and add it "
-                "to the MCP server's environment."
-            )
+        token = require_token(self._token, BANXICO_TOKEN_VAR, TOKEN_URL)
         try:
             response = await get_with_retry(
-                self._http, f"{BASE_URL}/{path}", headers={"Bmx-Token": self._token}
+                self._http, f"{BASE_URL}/{path}", headers={"Bmx-Token": token}
             )
         except httpx.HTTPError as error:
             raise UpstreamError(
@@ -152,7 +149,7 @@ def _parse_observations(payload: _Payload) -> list[Observation]:
         series = payload["bmx"]["series"][0]
         return [
             Observation(
-                date=_parse_date(point["fecha"]), value=float(point["dato"].replace(",", ""))
+                date=_parse_date(point["fecha"]), value=parse_finite(point["dato"].replace(",", ""))
             )
             for point in series.get("datos", [])
             if point["dato"] != "N/E"

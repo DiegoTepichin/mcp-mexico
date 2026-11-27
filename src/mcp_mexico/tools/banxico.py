@@ -14,6 +14,7 @@ from mcp_mexico.tools._errors import as_tool_error
 
 MAX_RANGE_DAYS = 366
 LOOKBACK_DAYS = 10
+EARLIEST_DATE = date(1900, 1, 1)
 
 
 class BanxicoTools:
@@ -84,7 +85,7 @@ class BanxicoTools:
     ) -> Observation:
         if day is None:
             return await self._client.latest(series)
-        _validate_not_future(day)
+        _validate_day(day)
         observations = await self._client.observations(
             series, day - timedelta(days=LOOKBACK_DAYS), day
         )
@@ -114,7 +115,9 @@ class BanxicoTools:
         )
 
 
-def _validate_not_future(day: date) -> None:
+def _validate_day(day: date) -> None:
+    if day < EARLIEST_DATE:
+        raise DataNotAvailableError(f"No Banxico series goes back to {day.isoformat()}.")
     today = today_mx()
     if day > today:
         raise InvalidRequestError(
