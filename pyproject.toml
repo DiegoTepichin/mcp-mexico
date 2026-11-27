@@ -21,7 +21,7 @@ classifiers = [
 ]
 dependencies = [
     "httpx>=0.28",
-    "mcp>=2.2,<2.3",
+    "mcp>=2.3,<2.4",
     "pydantic>=2",
     "tzdata>=2024.1; sys_platform == 'win32'",
 ]
