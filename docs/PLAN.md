@@ -34,7 +34,7 @@ scripts/
 
 Key decisions:
 
-- **SDK:** official `mcp` Python SDK, pinned to the 2.2.x line.
+- **SDK:** official `mcp` Python SDK, pinned to one minor line (2.3.x since 1.0.0).
 - **HTTP:** `httpx` (async). Tests mock it with `httpx.MockTransport` and recorded fixtures; no network in tests.
 - **Transport:** stdio only. No hosted server (out of scope).
 - **Cache:** in-memory TTL. Historical data for 24 h, "latest" queries for 1 h. Nothing written to disk.
@@ -60,6 +60,10 @@ Banxico series IDs, confirmed against the live API on 2026-10-03: FIX `SF43718`,
 ## After v0.1: truth-gap evaluation
 
 `evals/` measures how often a model gives the right official figure from memory and with this server's tools: 18 questions with answers from the official sources, a runner for any OpenAI-compatible API (Ollama locally) and a report. It widens the v0.1 scope without changing the server; method, results and limits are in [`truth-gap.md`](truth-gap.md). Tools that compute (for example ISR for a given income), more topics and larger models stay as GitHub issues.
+
+## v1.0: stable contract
+
+1.0.0 adds no tools. It promises that tool names, arguments and result fields only change in compatible ways until 2.0, checked by `tests/test_contract.py`, and that unusable upstream data, dates and tokens come back as tool errors.
 
 ## Milestones
 

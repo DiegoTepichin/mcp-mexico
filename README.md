@@ -89,6 +89,10 @@ Ask your assistant:
 
 In a run of three small local models (1 to 3 billion parameters) on 18 questions about official figures, none answered a single one correctly from memory. With this server, llama3.2:3b answered 14 of 18 correctly and qwen2.5:1.5b 12 of 18; all four ISR questions failed for both, because they must pick the right row of the bracket table. One run, small models, exact figures: read the [method and limits](docs/truth-gap.md) before quoting it.
 
+## Stability
+
+From 1.0, tool names, arguments and result fields only change in compatible ways; removing or renaming one takes a new major version. A test in CI compares every tool's schema with [a recorded contract](tests/contract/tools.json). Descriptions and error messages may be reworded. Changes are listed in the [changelog](CHANGELOG.md).
+
 ## Configuration
 
 | Variable | Required | Description |

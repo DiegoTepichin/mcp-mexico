@@ -1,0 +1,750 @@
+{
+  "get_fix_rate": {
+    "input": {
+      "properties": {
+        "date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "type": "object"
+    },
+    "output": {
+      "$defs": {
+        "Source": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "url"
+          ],
+          "type": "object"
+        }
+      },
+      "properties": {
+        "date": {
+          "format": "date",
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "indicator": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "indicator",
+        "description",
+        "unit",
+        "date",
+        "value",
+        "source"
+      ],
+      "type": "object"
+    }
+  },
+  "get_fix_rate_range": {
+    "input": {
+      "properties": {
+        "end": {
+          "format": "date",
+          "type": "string"
+        },
+        "start": {
+          "format": "date",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "type": "object"
+    },
+    "output": {
+      "$defs": {
+        "Observation": {
+          "properties": {
+            "date": {
+              "format": "date",
+              "type": "string"
+            },
+            "value": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "date",
+            "value"
+          ],
+          "type": "object"
+        },
+        "Source": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "url"
+          ],
+          "type": "object"
+        }
+      },
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "end": {
+          "format": "date",
+          "type": "string"
+        },
+        "indicator": {
+          "type": "string"
+        },
+        "observations": {
+          "items": {
+            "$ref": "#/$defs/Observation"
+          },
+          "type": "array"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "start": {
+          "format": "date",
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "indicator",
+        "description",
+        "unit",
+        "start",
+        "end",
+        "observations",
+        "source"
+      ],
+      "type": "object"
+    }
+  },
+  "get_inflation": {
+    "input": {
+      "properties": {
+        "month": {
+          "anyOf": [
+            {
+              "maximum": 12,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "type": "object"
+    },
+    "output": {
+      "$defs": {
+        "Source": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "url"
+          ],
+          "type": "object"
+        }
+      },
+      "properties": {
+        "annual_inflation_percent": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "inpc": {
+          "type": "number"
+        },
+        "monthly_inflation_percent": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "period": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "year_to_date_inflation_percent": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "period",
+        "inpc",
+        "monthly_inflation_percent",
+        "annual_inflation_percent",
+        "year_to_date_inflation_percent",
+        "source"
+      ],
+      "type": "object"
+    }
+  },
+  "get_inflation_range": {
+    "input": {
+      "properties": {
+        "end": {
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+          "type": "string"
+        },
+        "start": {
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "type": "object"
+    },
+    "output": {
+      "$defs": {
+        "InflationPeriod": {
+          "properties": {
+            "annual_inflation_percent": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "inpc": {
+              "type": "number"
+            },
+            "monthly_inflation_percent": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "period": {
+              "type": "string"
+            },
+            "year_to_date_inflation_percent": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "period",
+            "inpc",
+            "monthly_inflation_percent",
+            "annual_inflation_percent",
+            "year_to_date_inflation_percent"
+          ],
+          "type": "object"
+        },
+        "Source": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "url"
+          ],
+          "type": "object"
+        }
+      },
+      "properties": {
+        "end": {
+          "type": "string"
+        },
+        "periods": {
+          "items": {
+            "$ref": "#/$defs/InflationPeriod"
+          },
+          "type": "array"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "start": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "periods",
+        "source"
+      ],
+      "type": "object"
+    }
+  },
+  "get_interest_rate": {
+    "input": {
+      "properties": {
+        "date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "rate": {
+          "enum": [
+            "target",
+            "tiie_28",
+            "tiie_funding",
+            "cetes_28"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "rate"
+      ],
+      "type": "object"
+    },
+    "output": {
+      "$defs": {
+        "Source": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "url"
+          ],
+          "type": "object"
+        }
+      },
+      "properties": {
+        "date": {
+          "format": "date",
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "indicator": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "indicator",
+        "description",
+        "unit",
+        "date",
+        "value",
+        "source"
+      ],
+      "type": "object"
+    }
+  },
+  "get_interest_rate_range": {
+    "input": {
+      "properties": {
+        "end": {
+          "format": "date",
+          "type": "string"
+        },
+        "rate": {
+          "enum": [
+            "target",
+            "tiie_28",
+            "tiie_funding",
+            "cetes_28"
+          ],
+          "type": "string"
+        },
+        "start": {
+          "format": "date",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rate",
+        "start",
+        "end"
+      ],
+      "type": "object"
+    },
+    "output": {
+      "$defs": {
+        "Observation": {
+          "properties": {
+            "date": {
+              "format": "date",
+              "type": "string"
+            },
+            "value": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "date",
+            "value"
+          ],
+          "type": "object"
+        },
+        "Source": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "url"
+          ],
+          "type": "object"
+        }
+      },
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "end": {
+          "format": "date",
+          "type": "string"
+        },
+        "indicator": {
+          "type": "string"
+        },
+        "observations": {
+          "items": {
+            "$ref": "#/$defs/Observation"
+          },
+          "type": "array"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "start": {
+          "format": "date",
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "indicator",
+        "description",
+        "unit",
+        "start",
+        "end",
+        "observations",
+        "source"
+      ],
+      "type": "object"
+    }
+  },
+  "get_isr_table": {
+    "input": {
+      "properties": {
+        "period": {
+          "default": "monthly",
+          "enum": [
+            "monthly",
+            "annual"
+          ],
+          "type": "string"
+        },
+        "year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "type": "object"
+    },
+    "output": {
+      "$defs": {
+        "IsrBracket": {
+          "properties": {
+            "fixed_fee": {
+              "type": "number"
+            },
+            "lower_limit": {
+              "type": "number"
+            },
+            "rate_percent": {
+              "type": "number"
+            },
+            "upper_limit": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "lower_limit",
+            "upper_limit",
+            "fixed_fee",
+            "rate_percent"
+          ],
+          "type": "object"
+        },
+        "VerifiedSource": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "verified_on": {
+              "format": "date",
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "url",
+            "verified_on"
+          ],
+          "type": "object"
+        }
+      },
+      "properties": {
+        "brackets": {
+          "items": {
+            "$ref": "#/$defs/IsrBracket"
+          },
+          "type": "array"
+        },
+        "legal_basis": {
+          "type": "string"
+        },
+        "period": {
+          "enum": [
+            "monthly",
+            "annual"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/VerifiedSource"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "year",
+        "period",
+        "legal_basis",
+        "brackets",
+        "source"
+      ],
+      "type": "object"
+    }
+  },
+  "get_uma": {
+    "input": {
+      "properties": {
+        "year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "type": "object"
+    },
+    "output": {
+      "$defs": {
+        "VerifiedSource": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "verified_on": {
+              "format": "date",
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "url",
+            "verified_on"
+          ],
+          "type": "object"
+        }
+      },
+      "properties": {
+        "annual": {
+          "type": "number"
+        },
+        "daily": {
+          "type": "number"
+        },
+        "monthly": {
+          "type": "number"
+        },
+        "source": {
+          "$ref": "#/$defs/VerifiedSource"
+        },
+        "valid_from": {
+          "format": "date",
+          "type": "string"
+        },
+        "valid_until": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "year",
+        "daily",
+        "monthly",
+        "annual",
+        "valid_from",
+        "valid_until",
+        "source"
+      ],
+      "type": "object"
+    }
+  }
+}
