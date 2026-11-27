@@ -87,6 +87,10 @@ Pregúntale a tu asistente:
 
 En una corrida con tres modelos locales pequeños (de 1 a 3 mil millones de parámetros) y 18 preguntas sobre cifras oficiales, ninguno acertó una sola de memoria. Con este servidor, llama3.2:3b acertó 14 de 18 y qwen2.5:1.5b 12 de 18; las cuatro preguntas de ISR fallaron en ambos porque deben elegir el renglón correcto de la tabla. Una corrida, modelos pequeños, cifras exactas: lee el [método y los límites](docs/truth-gap.md) (en inglés) antes de citarlo.
 
+## Estabilidad
+
+Desde 1.0, los nombres de las herramientas, sus argumentos y los campos de sus resultados solo cambian de forma compatible; quitar o renombrar alguno requiere una nueva versión mayor. Una prueba en CI compara el esquema de cada herramienta con [un contrato registrado](tests/contract/tools.json). Las descripciones y los mensajes de error pueden cambiar. Los cambios se listan en el [changelog](CHANGELOG.md) (en inglés).
+
 ## Configuración
 
 | Variable | Obligatoria | Descripción |
