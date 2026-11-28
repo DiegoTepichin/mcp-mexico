@@ -2,7 +2,7 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
-## [1.0.0] - Unreleased
+## [1.0.0] - 2026-11-27
 
 First stable version: from here on, tool names, arguments and result fields only change in compatible ways until 2.0. It includes everything listed under 0.2.0, which was prepared but not published to PyPI.
 
@@ -67,7 +67,7 @@ First release.
 - `get_uma` and `get_isr_table`, offline, for 2020–2026.
 - Every result names its official source.
 
-[1.0.0]: https://github.com/DiegoTepichin/mcp-mexico/compare/v0.1.3...main
+[1.0.0]: https://github.com/DiegoTepichin/mcp-mexico/compare/v0.1.3...v1.0.0
 [0.1.3]: https://github.com/DiegoTepichin/mcp-mexico/releases/tag/v0.1.3
 [0.1.2]: https://github.com/DiegoTepichin/mcp-mexico/releases/tag/v0.1.2
 [0.1.1]: https://github.com/DiegoTepichin/mcp-mexico/releases/tag/v0.1.1

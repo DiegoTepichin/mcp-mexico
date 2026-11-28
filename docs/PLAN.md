@@ -1,6 +1,6 @@
 # mcp-mexico — v0.1 plan
 
-Status: **v0.1.0 released** (2026-10-06). Started 2026-10-02. Original target for v0.1: 2026-10-16.
+Status: **v1.0.0** (2026-11-27). v0.1.0 released 2026-10-06. Started 2026-10-02. Original target for v0.1: 2026-10-16.
 
 ## Goal
 
