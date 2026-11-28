@@ -5,9 +5,9 @@ MCP server that gives AI agents official Mexican public data: Banxico exchange a
 <!-- mcp-name: io.github.DiegoTepichin/mcp-mexico -->
 
 [![CI](https://github.com/DiegoTepichin/mcp-mexico/actions/workflows/ci.yml/badge.svg)](https://github.com/DiegoTepichin/mcp-mexico/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/DiegoTepichin/mcp-mexico/blob/main/LICENSE)
 
-[Leer en español](README.es.md)
+[Leer en español](https://github.com/DiegoTepichin/mcp-mexico/blob/main/README.es.md)
 
 ![Claude Code answering questions about the FIX exchange rate, inflation and ISR with mcp-mexico](https://raw.githubusercontent.com/DiegoTepichin/mcp-mexico/main/docs/demo.gif)
 
@@ -87,11 +87,11 @@ Ask your assistant:
 
 ## Does it help?
 
-In a run of three small local models (1 to 3 billion parameters) on 18 questions about official figures, none answered a single one correctly from memory. With this server, llama3.2:3b answered 14 of 18 correctly and qwen2.5:1.5b 12 of 18; all four ISR questions failed for both, because they must pick the right row of the bracket table. One run, small models, exact figures: read the [method and limits](docs/truth-gap.md) before quoting it.
+In a run of three small local models (1 to 3 billion parameters) on 18 questions about official figures, none answered a single one correctly from memory. With this server, llama3.2:3b answered 14 of 18 correctly and qwen2.5:1.5b 12 of 18; all four ISR questions failed for both, because they must pick the right row of the bracket table. One run, small models, exact figures: read the [method and limits](https://github.com/DiegoTepichin/mcp-mexico/blob/main/docs/truth-gap.md) before quoting it.
 
 ## Stability
 
-From 1.0, tool names, arguments and result fields only change in compatible ways; removing or renaming one takes a new major version. A test in CI compares every tool's schema with [a recorded contract](tests/contract/tools.json). Descriptions and error messages may be reworded. Changes are listed in the [changelog](CHANGELOG.md).
+From 1.0, tool names, arguments and result fields only change in compatible ways; removing or renaming one takes a new major version. A test in CI compares every tool's schema with [a recorded contract](https://github.com/DiegoTepichin/mcp-mexico/blob/main/tests/contract/tools.json). Descriptions and error messages may be reworded. Changes are listed in the [changelog](https://github.com/DiegoTepichin/mcp-mexico/blob/main/CHANGELOG.md).
 
 ## Configuration
 
@@ -111,7 +111,7 @@ uv run ruff check . && uv run ruff format --check . && uv run mypy .
 uv run mcp-mexico      # starts the server over stdio
 ```
 
-Tests never touch the network: they replay responses recorded from the real APIs. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Tests never touch the network: they replay responses recorded from the real APIs. See [CONTRIBUTING.md](https://github.com/DiegoTepichin/mcp-mexico/blob/main/CONTRIBUTING.md).
 
 ## Disclaimer
 
@@ -119,4 +119,4 @@ This project is not affiliated with Banco de México, INEGI or the SAT. Figures 
 
 ## License
 
-[MIT](LICENSE) © Diego Tepichin
+[MIT](https://github.com/DiegoTepichin/mcp-mexico/blob/main/LICENSE) © Diego Tepichin
